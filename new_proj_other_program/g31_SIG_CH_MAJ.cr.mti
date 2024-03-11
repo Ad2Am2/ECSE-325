@@ -1,0 +1,10 @@
+{H:/My Documents/ECSE325/lab2/g31_SIG_CH_MAJ.vhd} {1 {vcom -work work -2002 -explicit -vopt -stats=none {H:/My Documents/ECSE325/lab2/g31_SIG_CH_MAJ.vhd}
+Questa Intel Starter FPGA Edition-64 vcom 2023.1 Compiler 2023.01 Jan 23 2023
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity g31_SIG_CH_MAJ
+-- Compiling architecture Behavioral of g31_SIG_CH_MAJ
+
+} {} {}}

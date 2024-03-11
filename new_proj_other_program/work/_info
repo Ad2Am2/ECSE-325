@@ -1,0 +1,143 @@
+m255
+K4
+z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+!s12c _opt2
+R1
+R0
+R1
+R0
+R1
+!s12c _opt
+R1
+!s11e vcom 2023.1 2023.01, Jan 23 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/intelFPGA_pro/23.2
+T_opt
+!s110 1709329631
+Vn]KViAQNmXWn8mQBLCi4N2
+04 14 10 work g31_sig_ch_maj behavioral 1
+=1-208810de7eed-65e24cde-2ba-3ab8
+R1
+Z3 !s12b OEM100
+!s124 OEM10U1 
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 tCvgOpt 0
+n@_opt
+Z6 OL;O;2023.1;77
+R2
+T_opt1
+!s110 1710189138
+V7@Y1:7GTFl=5z<[o?T]g30
+Z7 04 22 19 work g31_sig_ch_maj_vhd_tst g31_sig_ch_maj_arch 1
+=1-208810de8961-65ef6a51-19-2ed8
+R1
+R3
+Z8 !s124 OEM10U2 
+R4
+R5
+n@_opt1
+R6
+T_opt2
+!s110 1710186793
+VS?aJ?6[ML0l1aZ]zaC`F?2
+R7
+=1-208810de8961-65ef6128-3b4-3ac8
+R1
+R3
+R8
+o-quiet -auto_acc_if_foreign -work work +acc
+R5
+n@_opt2
+R6
+R2
+Eg31_sig_ch_maj
+Z9 w1709328997
+Z10 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z11 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z12 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 13
+Z13 dH:/My Documents/ECSE325/new_proj_other_program
+Z14 8H:/My Documents/ECSE325/lab2/g31_SIG_CH_MAJ.vhd
+Z15 FH:/My Documents/ECSE325/lab2/g31_SIG_CH_MAJ.vhd
+l0
+L18 1
+VHMR_oSXn_TdJ]5mK4?NdW1
+!s100 E]fB4h<DM;O6><zf?>;b`1
+Z16 OL;C;2023.1;77
+32
+Z17 !s110 1710189095
+!i10b 1
+Z18 !s108 1710189095.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|H:/My Documents/ECSE325/lab2/g31_SIG_CH_MAJ.vhd|
+Z20 !s107 H:/My Documents/ECSE325/lab2/g31_SIG_CH_MAJ.vhd|
+!i113 0
+Z21 o-work work -2002 -explicit
+Z22 tExplicit 1 CvgOpt 0
+Abehavioral
+R10
+R11
+R12
+DEx4 work 14 g31_sig_ch_maj 0 22 HMR_oSXn_TdJ]5mK4?NdW1
+!i122 13
+l27
+L24 41
+V>jm0:TSmkKhgK[VmkRCWJ0
+!s100 jLQZ3Xd<@24ikXm<?F6PW3
+R16
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 0
+R21
+R22
+Eg31_sig_ch_maj_vhd_tst
+Z23 w1710189084
+R11
+R12
+!i122 14
+R13
+Z24 8H:/My Documents/ECSE325/lab2/simulation/questa/g31_SIG_CH_MAJ.vht
+Z25 FH:/My Documents/ECSE325/lab2/simulation/questa/g31_SIG_CH_MAJ.vht
+l0
+L31 1
+VC?0MQ8gOJ^=fe:`diQ6Pc3
+!s100 ?<@^N6KgCAmNV5<aQ2GF01
+R16
+32
+R17
+!i10b 1
+R18
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|H:/My Documents/ECSE325/lab2/simulation/questa/g31_SIG_CH_MAJ.vht|
+Z27 !s107 H:/My Documents/ECSE325/lab2/simulation/questa/g31_SIG_CH_MAJ.vht|
+!i113 0
+R21
+R22
+Ag31_sig_ch_maj_arch
+R11
+R12
+DEx4 work 22 g31_sig_ch_maj_vhd_tst 0 22 C?0MQ8gOJ^=fe:`diQ6Pc3
+!i122 14
+l60
+L33 84
+VHk25njT>>lQaL0Eh`;jk02
+!s100 ]SnLV=Ug6gmYgX=@GWAHj2
+R16
+32
+R17
+!i10b 1
+R18
+R26
+R27
+!i113 0
+R21
+R22

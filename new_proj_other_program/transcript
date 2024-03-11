@@ -1,0 +1,34 @@
+# Compile of g31_SIG_CH_MAJ.vht failed with 1 errors.
+# Compile of g31_SIG_CH_MAJ.vhd was successful.
+# Compile of g31_SIG_CH_MAJ.vht was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.g31_sig_ch_maj_vhd_tst
+# vsim work.g31_sig_ch_maj_vhd_tst 
+# Start time: 16:32:16 on Mar 11,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.g31_sig_ch_maj_vhd_tst(g31_sig_ch_maj_arch)#1
+add wave -position end  sim:/g31_sig_ch_maj_vhd_tst/A_o
+add wave -position end  sim:/g31_sig_ch_maj_vhd_tst/B_o
+add wave -position end  sim:/g31_sig_ch_maj_vhd_tst/C_o
+add wave -position end  sim:/g31_sig_ch_maj_vhd_tst/CH
+add wave -position end  sim:/g31_sig_ch_maj_vhd_tst/E_o
+add wave -position end  sim:/g31_sig_ch_maj_vhd_tst/F_o
+add wave -position end  sim:/g31_sig_ch_maj_vhd_tst/G_o
+add wave -position end  sim:/g31_sig_ch_maj_vhd_tst/MAJ
+add wave -position end  sim:/g31_sig_ch_maj_vhd_tst/SIG0
+add wave -position end  sim:/g31_sig_ch_maj_vhd_tst/SIG1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: msolab  Hostname: 156TR4180-03  ProcessID: 15048
+#           Attempting to use alternate WLF file "./wlftd9qn2t".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftd9qn2t
+run
+# Causality operation skipped due to absence of debug database file
+run
+run
+# End time: 16:48:46 on Mar 11,2024, Elapsed time: 0:16:30
+# Errors: 0, Warnings: 5
