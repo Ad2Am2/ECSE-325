@@ -33,6 +33,7 @@ architecture Behavioral of g31_Hash_Core is
     -- Internal signals
     signal A_reg, B_reg, C_reg, D_reg, E_reg, F_reg, G_reg, H_reg : std_logic_vector(31 downto 0);
     signal Kt, Wt : std_logic_vector(31 downto 0);
+    signal RESTOFSHIT : std_logic_vector(31 downto 0);
 
 begin
 
@@ -69,28 +70,35 @@ begin
         E_o => E_reg,
         F_o => F_reg,
         G_o => G_reg,
-        SIG0 => open, -- Connect output ports appropriately
-        SIG1 => open,
-        CH => open,
-        MAJ => open
+        SIG0 => SIG0, -- Connect output ports appropriately
+        SIG1 => SIG1,
+        CH => CH,
+        MAJ => MAJ
     );
 
     -- Additions
     process
     begin
         if not LD = '1' then
-            A_reg <= std_logic_vector(unsigned(A_reg) + unsigned(B_reg));
-            B_reg <= std_logic_vector(unsigned(B_reg) + unsigned(C_reg));
-            C_reg <= std_logic_vector(unsigned(C_reg) + unsigned(D_reg));
-            D_reg <= std_logic_vector(unsigned(D_reg) + unsigned(E_reg));
-            E_reg <= std_logic_vector(unsigned(E_reg) + unsigned(F_reg));
-            F_reg <= std_logic_vector(unsigned(F_reg) + unsigned(G_reg));
-            G_reg <= std_logic_vector(unsigned(G_reg) + unsigned(H_reg));
-            H_reg <= std_logic_vector(unsigned(H_reg) + unsigned(A_reg));
+
+            RESTOFSHIT <= std_logic_vector(unsigned(CH) + unsigned(H_reg) + unsigned(Kt) + unsigned(Wt) + unsigned(SIG1));
+
+            
+
+            A_reg <= std_logic_vector(unsigned(SIG0) + unsigned(MAJ) + unsigned(RESTOFSHIT));
+            B_reg <= A_reg;
+            C_reg <= B_reg;
+            D_reg <= C_reg;
+            E_reg <= std_logic_vector(unsigned(D_reg) + unsigned(RESTOFSHIT));
+            F_reg <= E_reg;
+            G_reg <= F_reg;
+            H_reg <= G_reg;
+
+            
         end if;
     end process;
 
-    
+
 
     -- Output ports
     A_o <= A_reg;
