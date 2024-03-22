@@ -1,0 +1,14 @@
+--
+-- entity name: gNN_SHA256 (replace “NN” by your group’s number)
+--
+-- Version 1.0
+-- Authors: (list the group member names here)
+-- Date: March ??, 2021 (enter the date of the latest edit to the file)
+library ieee; -- allows use of the std_logic_vector type
+use ieee.std_logic_1164.all;
+entity gNN_SHA256 is -- to be changed in future labs
+port (
+hash_out : out std_logic_vector(255 downto 0);
+RESET, CLK : in std_logic
+);
+end gNN_SHA256;
