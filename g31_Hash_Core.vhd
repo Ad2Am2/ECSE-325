@@ -55,6 +55,15 @@ begin
                 -- Update values based on SHA-256 algorithm
                 -- (Operations implemented outside the process block)
 
+                H_reg <= G_reg;
+                G_reg <= F_reg;
+                F_reg <= E_reg;
+                E_reg <= E_reg_next;
+                D_reg <= C_reg;
+                C_reg <= B_reg;
+                B_reg <= A_reg;
+                A_reg <= A_reg_next;
+
                 -- For example:
                 -- Kt <= Some_Value;
                 -- Wt <= Some_Value;
@@ -78,29 +87,17 @@ begin
     );
 
     -- Additions
-    process
+    process(CH, Kt, Wt, SIG1, SIG0, MAJ, CLK)
     begin -- Shifter
-        if not LD = '1' then
 
-            RESTOFSTUFF <= std_logic_vector(unsigned(CH) + unsigned(H_reg) + unsigned(Kt) + unsigned(Wt) + unsigned(SIG1));
+        RESTOFSTUFF <= std_logic_vector(unsigned(CH) + unsigned(H_reg) + unsigned(Kt) + unsigned(Wt) + unsigned(SIG1));
+
+        A_reg_next <= std_logic_vector(unsigned(SIG0) + unsigned(MAJ) + unsigned(RESTOFSTUFF));
+        E_reg_next <= std_logic_vector(unsigned(D_reg) + unsigned(RESTOFSTUFF));
             
-
-            A_reg <= std_logic_vector(unsigned(SIG0) + unsigned(MAJ) + unsigned(RESTOFSTUFF));
-            B_reg <= A_reg;
-            C_reg <= B_reg;
-            D_reg <= C_reg;
-            E_reg <= std_logic_vector(unsigned(D_reg) + unsigned(RESTOFSTUFF));
-            F_reg <= E_reg;
-            G_reg <= F_reg;
-            H_reg <= G_reg;
-
-            
-        end if;
     end process;
-	 
 
-
-
+    
 
     -- Output ports
     A_o <= A_reg;
