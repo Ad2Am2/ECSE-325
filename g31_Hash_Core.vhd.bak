@@ -34,7 +34,6 @@ architecture Behavioral of g31_Hash_Core is
     signal A_reg, B_reg, C_reg, D_reg, E_reg, F_reg, G_reg, H_reg : std_logic_vector(31 downto 0);
     signal Kt, Wt : std_logic_vector(31 downto 0);
     signal RESTOFSHIT : std_logic_vector(31 downto 0);
-	 signal SIG0, SIG1, CH, MAJ : std_logic_vector(31 downto 0);
 
 begin
 
@@ -82,14 +81,15 @@ begin
     begin -- Shifter
         if not LD = '1' then
 
-            RESTOFSTUFF <= std_logic_vector(unsigned(CH) + unsigned(H_reg) + unsigned(Kt) + unsigned(Wt) + unsigned(SIG1));
+            RESTOFSHIT <= std_logic_vector(unsigned(CH) + unsigned(H_reg) + unsigned(Kt) + unsigned(Wt) + unsigned(SIG1));
+
             
 
-            A_reg <= std_logic_vector(unsigned(SIG0) + unsigned(MAJ) + unsigned(RESTOFSTUFF));
+            A_reg <= std_logic_vector(unsigned(SIG0) + unsigned(MAJ) + unsigned(RESTOFSHIT));
             B_reg <= A_reg;
             C_reg <= B_reg;
             D_reg <= C_reg;
-            E_reg <= std_logic_vector(unsigned(D_reg) + unsigned(RESTOFSTUFF));
+            E_reg <= std_logic_vector(unsigned(D_reg) + unsigned(RESTOFSHIT));
             F_reg <= E_reg;
             G_reg <= F_reg;
             H_reg <= G_reg;
@@ -97,8 +97,6 @@ begin
             
         end if;
     end process;
-	 
-
 
 
 
