@@ -78,7 +78,7 @@ begin
 
     -- Additions
     process
-    begin
+    begin -- Shifter
         if not LD = '1' then
 
             RESTOFSHIT <= std_logic_vector(unsigned(CH) + unsigned(H_reg) + unsigned(Kt) + unsigned(Wt) + unsigned(SIG1));
