@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g31_SHA256
-Tue Mar 26 14:30:08 2024
+Tue Mar 26 15:01:57 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Standard Edition
 
 
@@ -10,7 +10,16 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |g31_SHA256|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Port Connectivity Checks: "g31_Hash_Core:i1"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +43,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+-----------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Mar 26 14:30:08 2024                  ;
-; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Standard Edition ;
-; Revision Name               ; g31_SHA256                                         ;
-; Top-level Entity Name       ; g31_SHA256                                         ;
-; Family                      ; Cyclone V                                          ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                          ;
-; Total registers             ; N/A until Partition Merge                          ;
-; Total pins                  ; N/A until Partition Merge                          ;
-; Total virtual pins          ; N/A until Partition Merge                          ;
-; Total block memory bits     ; N/A until Partition Merge                          ;
-; Total PLLs                  ; N/A until Partition Merge                          ;
-; Total DLLs                  ; N/A until Partition Merge                          ;
-+-----------------------------+----------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++---------------------------------+----------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Mar 26 15:01:57 2024              ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Standard Edition ;
+; Revision Name                   ; g31_SHA256                                         ;
+; Top-level Entity Name           ; g31_SHA256                                         ;
+; Family                          ; Cyclone V                                          ;
+; Logic utilization (in ALMs)     ; N/A                                                ;
+; Total registers                 ; 265                                                ;
+; Total pins                      ; 258                                                ;
+; Total virtual pins              ; 0                                                  ;
+; Total block memory bits         ; 0                                                  ;
+; Total DSP Blocks                ; 0                                                  ;
+; Total HSSI RX PCSs              ; 0                                                  ;
+; Total HSSI PMA RX Deserializers ; 0                                                  ;
+; Total HSSI TX PCSs              ; 0                                                  ;
+; Total HSSI PMA TX Serializers   ; 0                                                  ;
+; Total PLLs                      ; 0                                                  ;
+; Total DLLs                      ; 0                                                  ;
++---------------------------------+----------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -155,13 +169,297 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; lab2/g31_SIG_CH_MAJ.vhd          ; yes             ; User VHDL File  ; H:/My Documents/ECSE325/ECSE-325/lab2/g31_SIG_CH_MAJ.vhd ;         ;
+; g31_SHA256.vhd                   ; yes             ; User VHDL File  ; H:/My Documents/ECSE325/ECSE-325/g31_SHA256.vhd          ;         ;
+; g31_Hash_Core.vhd                ; yes             ; User VHDL File  ; H:/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd       ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 201       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 372       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 0         ;
+;     -- 5 input functions                    ; 1         ;
+;     -- 4 input functions                    ; 6         ;
+;     -- <=3 input functions                  ; 365       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 265       ;
+;                                             ;           ;
+; I/O pins                                    ; 258       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 265       ;
+; Total fan-out                               ; 2218      ;
+; Average fan-out                             ; 1.92      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                   ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Entity Name    ; Library Name ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+----------------+--------------+
+; |g31_SHA256                                ; 372 (12)            ; 265 (9)                   ; 0                 ; 0          ; 258  ; 0            ; |g31_SHA256                                                     ; g31_SHA256     ; work         ;
+;    |g31_Hash_Core:i1|                      ; 360 (232)           ; 256 (256)                 ; 0                 ; 0          ; 0    ; 0            ; |g31_SHA256|g31_Hash_Core:i1                                    ; g31_Hash_Core  ; work         ;
+;       |g31_SIG_CH_MAJ:g31_SIG_CH_MAJ_inst| ; 128 (128)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |g31_SHA256|g31_Hash_Core:i1|g31_SIG_CH_MAJ:g31_SIG_CH_MAJ_inst ; g31_SIG_CH_MAJ ; work         ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------+
+; State Machine - |g31_SHA256|state                ;
++------------+------------+-----------+------------+
+; Name       ; state.IDLE ; state.RUN ; state.INIT ;
++------------+------------+-----------+------------+
+; state.INIT ; 0          ; 0         ; 0          ;
+; state.RUN  ; 0          ; 1         ; 1          ;
+; state.IDLE ; 1          ; 0         ; 1          ;
++------------+------------+-----------+------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; state.INIT                            ; Lost fanout        ;
+; Total Number of Removed Registers = 1 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 265   ;
+; Number of registers using Synchronous Clear  ; 120   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 7     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "g31_Hash_Core:i1"   ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; a_i[30..29]  ; Input ; Info     ; Stuck at VCC ;
+; a_i[16..13]  ; Input ; Info     ; Stuck at VCC ;
+; a_i[10..9]   ; Input ; Info     ; Stuck at VCC ;
+; a_i[6..5]    ; Input ; Info     ; Stuck at VCC ;
+; a_i[2..0]    ; Input ; Info     ; Stuck at VCC ;
+; a_i[24..20]  ; Input ; Info     ; Stuck at GND ;
+; a_i[18..17]  ; Input ; Info     ; Stuck at GND ;
+; a_i[12..11]  ; Input ; Info     ; Stuck at GND ;
+; a_i[8..7]    ; Input ; Info     ; Stuck at GND ;
+; a_i[4..3]    ; Input ; Info     ; Stuck at GND ;
+; a_i[31]      ; Input ; Info     ; Stuck at GND ;
+; a_i[28]      ; Input ; Info     ; Stuck at GND ;
+; a_i[27]      ; Input ; Info     ; Stuck at VCC ;
+; a_i[26]      ; Input ; Info     ; Stuck at GND ;
+; a_i[25]      ; Input ; Info     ; Stuck at VCC ;
+; a_i[19]      ; Input ; Info     ; Stuck at VCC ;
+; b_i[29..27]  ; Input ; Info     ; Stuck at VCC ;
+; b_i[25..24]  ; Input ; Info     ; Stuck at VCC ;
+; b_i[22..21]  ; Input ; Info     ; Stuck at VCC ;
+; b_i[18..15]  ; Input ; Info     ; Stuck at VCC ;
+; b_i[11..9]   ; Input ; Info     ; Stuck at VCC ;
+; b_i[20..19]  ; Input ; Info     ; Stuck at GND ;
+; b_i[6..3]    ; Input ; Info     ; Stuck at GND ;
+; b_i[31]      ; Input ; Info     ; Stuck at VCC ;
+; b_i[30]      ; Input ; Info     ; Stuck at GND ;
+; b_i[26]      ; Input ; Info     ; Stuck at GND ;
+; b_i[23]      ; Input ; Info     ; Stuck at GND ;
+; b_i[14]      ; Input ; Info     ; Stuck at GND ;
+; b_i[13]      ; Input ; Info     ; Stuck at VCC ;
+; b_i[12]      ; Input ; Info     ; Stuck at GND ;
+; b_i[8]       ; Input ; Info     ; Stuck at GND ;
+; b_i[7]       ; Input ; Info     ; Stuck at VCC ;
+; b_i[2]       ; Input ; Info     ; Stuck at VCC ;
+; b_i[1]       ; Input ; Info     ; Stuck at GND ;
+; b_i[0]       ; Input ; Info     ; Stuck at VCC ;
+; c_i[29..26]  ; Input ; Info     ; Stuck at VCC ;
+; c_i[22..21]  ; Input ; Info     ; Stuck at VCC ;
+; c_i[19..17]  ; Input ; Info     ; Stuck at VCC ;
+; c_i[15..12]  ; Input ; Info     ; Stuck at VCC ;
+; c_i[9..8]    ; Input ; Info     ; Stuck at VCC ;
+; c_i[6..4]    ; Input ; Info     ; Stuck at VCC ;
+; c_i[31..30]  ; Input ; Info     ; Stuck at GND ;
+; c_i[25..23]  ; Input ; Info     ; Stuck at GND ;
+; c_i[11..10]  ; Input ; Info     ; Stuck at GND ;
+; c_i[3..2]    ; Input ; Info     ; Stuck at GND ;
+; c_i[20]      ; Input ; Info     ; Stuck at GND ;
+; c_i[16]      ; Input ; Info     ; Stuck at GND ;
+; c_i[7]       ; Input ; Info     ; Stuck at GND ;
+; c_i[1]       ; Input ; Info     ; Stuck at VCC ;
+; c_i[0]       ; Input ; Info     ; Stuck at GND ;
+; d_i[19..12]  ; Input ; Info     ; Stuck at VCC ;
+; d_i[5..3]    ; Input ; Info     ; Stuck at VCC ;
+; d_i[28..27]  ; Input ; Info     ; Stuck at GND ;
+; d_i[21..20]  ; Input ; Info     ; Stuck at GND ;
+; d_i[7..6]    ; Input ; Info     ; Stuck at GND ;
+; d_i[31]      ; Input ; Info     ; Stuck at VCC ;
+; d_i[30]      ; Input ; Info     ; Stuck at GND ;
+; d_i[29]      ; Input ; Info     ; Stuck at VCC ;
+; d_i[26]      ; Input ; Info     ; Stuck at VCC ;
+; d_i[25]      ; Input ; Info     ; Stuck at GND ;
+; d_i[24]      ; Input ; Info     ; Stuck at VCC ;
+; d_i[23]      ; Input ; Info     ; Stuck at GND ;
+; d_i[22]      ; Input ; Info     ; Stuck at VCC ;
+; d_i[11]      ; Input ; Info     ; Stuck at GND ;
+; d_i[10]      ; Input ; Info     ; Stuck at VCC ;
+; d_i[9]       ; Input ; Info     ; Stuck at GND ;
+; d_i[8]       ; Input ; Info     ; Stuck at VCC ;
+; d_i[2]       ; Input ; Info     ; Stuck at GND ;
+; d_i[1]       ; Input ; Info     ; Stuck at VCC ;
+; d_i[0]       ; Input ; Info     ; Stuck at GND ;
+; e_i[19..17]  ; Input ; Info     ; Stuck at VCC ;
+; e_i[6..0]    ; Input ; Info     ; Stuck at VCC ;
+; e_i[27..25]  ; Input ; Info     ; Stuck at GND ;
+; e_i[23..20]  ; Input ; Info     ; Stuck at GND ;
+; e_i[16..15]  ; Input ; Info     ; Stuck at GND ;
+; e_i[11..10]  ; Input ; Info     ; Stuck at GND ;
+; e_i[8..7]    ; Input ; Info     ; Stuck at GND ;
+; e_i[31]      ; Input ; Info     ; Stuck at GND ;
+; e_i[30]      ; Input ; Info     ; Stuck at VCC ;
+; e_i[29]      ; Input ; Info     ; Stuck at GND ;
+; e_i[28]      ; Input ; Info     ; Stuck at VCC ;
+; e_i[24]      ; Input ; Info     ; Stuck at VCC ;
+; e_i[14]      ; Input ; Info     ; Stuck at VCC ;
+; e_i[13]      ; Input ; Info     ; Stuck at GND ;
+; e_i[12]      ; Input ; Info     ; Stuck at VCC ;
+; e_i[9]       ; Input ; Info     ; Stuck at VCC ;
+; f_i[28..27]  ; Input ; Info     ; Stuck at VCC ;
+; f_i[25..24]  ; Input ; Info     ; Stuck at VCC ;
+; f_i[14..13]  ; Input ; Info     ; Stuck at VCC ;
+; f_i[3..2]    ; Input ; Info     ; Stuck at VCC ;
+; f_i[30..29]  ; Input ; Info     ; Stuck at GND ;
+; f_i[23..19]  ; Input ; Info     ; Stuck at GND ;
+; f_i[10..8]   ; Input ; Info     ; Stuck at GND ;
+; f_i[6..4]    ; Input ; Info     ; Stuck at GND ;
+; f_i[1..0]    ; Input ; Info     ; Stuck at GND ;
+; f_i[31]      ; Input ; Info     ; Stuck at VCC ;
+; f_i[26]      ; Input ; Info     ; Stuck at GND ;
+; f_i[18]      ; Input ; Info     ; Stuck at VCC ;
+; f_i[17]      ; Input ; Info     ; Stuck at GND ;
+; f_i[16]      ; Input ; Info     ; Stuck at VCC ;
+; f_i[15]      ; Input ; Info     ; Stuck at GND ;
+; f_i[12]      ; Input ; Info     ; Stuck at GND ;
+; f_i[11]      ; Input ; Info     ; Stuck at VCC ;
+; f_i[7]       ; Input ; Info     ; Stuck at VCC ;
+; g_i[28..23]  ; Input ; Info     ; Stuck at VCC ;
+; g_i[17..14]  ; Input ; Info     ; Stuck at VCC ;
+; g_i[12..11]  ; Input ; Info     ; Stuck at VCC ;
+; g_i[8..7]    ; Input ; Info     ; Stuck at VCC ;
+; g_i[1..0]    ; Input ; Info     ; Stuck at VCC ;
+; g_i[31..29]  ; Input ; Info     ; Stuck at GND ;
+; g_i[22..18]  ; Input ; Info     ; Stuck at GND ;
+; g_i[10..9]   ; Input ; Info     ; Stuck at GND ;
+; g_i[13]      ; Input ; Info     ; Stuck at GND ;
+; g_i[6]       ; Input ; Info     ; Stuck at GND ;
+; g_i[5]       ; Input ; Info     ; Stuck at VCC ;
+; g_i[4]       ; Input ; Info     ; Stuck at GND ;
+; g_i[3]       ; Input ; Info     ; Stuck at VCC ;
+; g_i[2]       ; Input ; Info     ; Stuck at GND ;
+; h_i[28..27]  ; Input ; Info     ; Stuck at VCC ;
+; h_i[25..21]  ; Input ; Info     ; Stuck at VCC ;
+; h_i[15..14]  ; Input ; Info     ; Stuck at VCC ;
+; h_i[11..10]  ; Input ; Info     ; Stuck at VCC ;
+; h_i[4..3]    ; Input ; Info     ; Stuck at VCC ;
+; h_i[20..16]  ; Input ; Info     ; Stuck at GND ;
+; h_i[13..12]  ; Input ; Info     ; Stuck at GND ;
+; h_i[7..5]    ; Input ; Info     ; Stuck at GND ;
+; h_i[2..1]    ; Input ; Info     ; Stuck at GND ;
+; h_i[31]      ; Input ; Info     ; Stuck at GND ;
+; h_i[30]      ; Input ; Info     ; Stuck at VCC ;
+; h_i[29]      ; Input ; Info     ; Stuck at GND ;
+; h_i[26]      ; Input ; Info     ; Stuck at GND ;
+; h_i[9]       ; Input ; Info     ; Stuck at GND ;
+; h_i[8]       ; Input ; Info     ; Stuck at VCC ;
+; h_i[0]       ; Input ; Info     ; Stuck at VCC ;
+; kt_i[11..7]  ; Input ; Info     ; Stuck at VCC ;
+; kt_i[4..3]   ; Input ; Info     ; Stuck at VCC ;
+; kt_i[29..26] ; Input ; Info     ; Stuck at GND ;
+; kt_i[22..20] ; Input ; Info     ; Stuck at GND ;
+; kt_i[16..14] ; Input ; Info     ; Stuck at GND ;
+; kt_i[6..5]   ; Input ; Info     ; Stuck at GND ;
+; kt_i[2..0]   ; Input ; Info     ; Stuck at GND ;
+; kt_i[31]     ; Input ; Info     ; Stuck at GND ;
+; kt_i[30]     ; Input ; Info     ; Stuck at VCC ;
+; kt_i[25]     ; Input ; Info     ; Stuck at VCC ;
+; kt_i[24]     ; Input ; Info     ; Stuck at GND ;
+; kt_i[23]     ; Input ; Info     ; Stuck at VCC ;
+; kt_i[19]     ; Input ; Info     ; Stuck at VCC ;
+; kt_i[18]     ; Input ; Info     ; Stuck at GND ;
+; kt_i[17]     ; Input ; Info     ; Stuck at VCC ;
+; kt_i[13]     ; Input ; Info     ; Stuck at VCC ;
+; kt_i[12]     ; Input ; Info     ; Stuck at GND ;
+; wt_i         ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 265                         ;
+;     CLR               ; 2                           ;
+;     ENA               ; 7                           ;
+;     SCLR              ; 120                         ;
+;     plain             ; 136                         ;
+; arriav_lcell_comb     ; 372                         ;
+;     arith             ; 32                          ;
+;         2 data inputs ; 32                          ;
+;     normal            ; 276                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 138                         ;
+;         3 data inputs ; 130                         ;
+;         4 data inputs ; 6                           ;
+;         5 data inputs ; 1                           ;
+;     shared            ; 64                          ;
+;         3 data inputs ; 64                          ;
+; boundary_port         ; 258                         ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.79                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Standard Edition
-    Info: Processing started: Tue Mar 26 14:30:03 2024
+    Info: Processing started: Tue Mar 26 15:01:49 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g31_SHA256 -c g31_SHA256
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -188,12 +486,23 @@ Warning (10540): VHDL Signal Declaration warning at g31_SHA256.vhd(29): used exp
 Info (12128): Elaborating entity "g31_Hash_Core" for hierarchy "g31_Hash_Core:i1" File: H:/My Documents/ECSE325/ECSE-325/g31_SHA256.vhd Line: 47
 Warning (10541): VHDL Signal Declaration warning at g31_Hash_Core.vhd(35): used implicit default value for signal "Kt" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: H:/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 35
 Warning (10541): VHDL Signal Declaration warning at g31_Hash_Core.vhd(35): used implicit default value for signal "Wt" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: H:/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 35
-Error (10442): VHDL Process Statement error at g31_Hash_Core.vhd(100): Process Statement must contain either a sensitivity list or a Wait Statement File: H:/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 100
-Error (12152): Can't elaborate user hierarchy "g31_Hash_Core:i1" File: H:/My Documents/ECSE325/ECSE-325/g31_SHA256.vhd Line: 47
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 13 warnings
-    Error: Peak virtual memory: 4860 megabytes
-    Error: Processing ended: Tue Mar 26 14:30:08 2024
-    Error: Elapsed time: 00:00:05
-    Error: Total CPU time (on all processors): 00:00:03
+Warning (10492): VHDL Process Statement warning at g31_Hash_Core.vhd(93): signal "H_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at g31_Hash_Core.vhd(95): signal "RESTOFSTUFF" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 95
+Warning (10492): VHDL Process Statement warning at g31_Hash_Core.vhd(96): signal "D_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at g31_Hash_Core.vhd(96): signal "RESTOFSTUFF" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 96
+Info (12128): Elaborating entity "g31_SIG_CH_MAJ" for hierarchy "g31_Hash_Core:i1|g31_SIG_CH_MAJ:g31_SIG_CH_MAJ_inst" File: H:/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 75
+Warning (330000): Timing-Driven Synthesis is skipped because it could not initialize the timing netlist
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 718 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 256 output pins
+    Info (21061): Implemented 460 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4864 megabytes
+    Info: Processing ended: Tue Mar 26 15:01:57 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:04
 
 

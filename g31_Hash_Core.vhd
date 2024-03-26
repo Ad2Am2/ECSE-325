@@ -33,8 +33,8 @@ architecture Behavioral of g31_Hash_Core is
     -- Internal signals
     signal A_reg, B_reg, C_reg, D_reg, E_reg, F_reg, G_reg, H_reg : std_logic_vector(31 downto 0);
     signal Kt, Wt : std_logic_vector(31 downto 0);
-    signal RESTOFSHIT : std_logic_vector(31 downto 0);
 	 signal SIG0, SIG1, CH, MAJ : std_logic_vector(31 downto 0);
+	 signal A_reg_next, E_reg_next, RESTOFSTUFF : std_logic_vector(31 downto 0);
 
 begin
 
