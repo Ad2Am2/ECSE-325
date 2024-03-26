@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g31_SHA256
-Tue Mar 26 15:01:57 2024
+Tue Mar 26 15:59:32 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Standard Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +---------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 26 15:01:57 2024              ;
+; Analysis & Synthesis Status     ; Successful - Tue Mar 26 15:59:32 2024              ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Standard Edition ;
 ; Revision Name                   ; g31_SHA256                                         ;
 ; Top-level Entity Name           ; g31_SHA256                                         ;
@@ -162,10 +162,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -459,7 +460,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Standard Edition
-    Info: Processing started: Tue Mar 26 15:01:49 2024
+    Info: Processing started: Tue Mar 26 15:59:23 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g31_SHA256 -c g31_SHA256
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -491,7 +492,7 @@ Warning (10492): VHDL Process Statement warning at g31_Hash_Core.vhd(95): signal
 Warning (10492): VHDL Process Statement warning at g31_Hash_Core.vhd(96): signal "D_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 96
 Warning (10492): VHDL Process Statement warning at g31_Hash_Core.vhd(96): signal "RESTOFSTUFF" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 96
 Info (12128): Elaborating entity "g31_SIG_CH_MAJ" for hierarchy "g31_Hash_Core:i1|g31_SIG_CH_MAJ:g31_SIG_CH_MAJ_inst" File: H:/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 75
-Warning (330000): Timing-Driven Synthesis is skipped because it could not initialize the timing netlist
+Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -499,10 +500,10 @@ Info (21057): Implemented 718 device resources after synthesis - the final resou
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 256 output pins
     Info (21061): Implemented 460 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4864 megabytes
-    Info: Processing ended: Tue Mar 26 15:01:57 2024
-    Info: Elapsed time: 00:00:08
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4909 megabytes
+    Info: Processing ended: Tue Mar 26 15:59:33 2024
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:04
 
 
