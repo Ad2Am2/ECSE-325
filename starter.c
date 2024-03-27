@@ -15,7 +15,7 @@ int16_t fpsin(int16_t i) {
 
     /* The following section implements the formula:
 
-     y2^-n (A1-2^(q-p) y 2^-ny2^-n [B12-ry 2^-nC1y]) 2^(a-q)
+     = i * 2^-n * (A1 - 2^(q-p) * i * 2^-n * i * 2^-n * [B1 - 2^-r * i * 2^-n * C1 * i]) * 2^(a-q)
      Where the constants are defined as follows: */
 
      enum {A1=3370945099UL, B1=2746362156UL, C1=292421UL};
