@@ -32,13 +32,13 @@ begin
     -- Implementation of the given formula
     -- result <= (angle_32 * (A1 - ((2**(q-p)) * angle_32 * (angle_32 srl n) * (B1 - ((angle_32 srl (n+r)) * C1 * (angle_32 srl n)))))) srl (n+q-a);
 
-    result <= rotate_right((C1 * angle_32), n);
-    result <= B1 - rotate_right((angle_32 * result), r);
-    result <= angle_32 * rotate_right(result, n);
-    result <= angle_32 * rotate_right(result, n);
-    result <= A1 - rotate_right(result, (p-q));
-    result <= angle_32 * rotate_right(result, n);
-    result <= rotate_right((result + rotate_left(1, (q-a-1))), (q-a));
+    result <= unsigned(rotate_right((C1 * angle_32), n));
+    result <= B1 - unsigned(rotate_right((angle_32 * result), r));
+    result <= angle_32 * unsigned(rotate_right(result, n));
+    result <= angle_32 * unsigned(rotate_right(result, n));
+    result <= A1 - unsigned(rotate_right(result, (p-q)));
+    result <= angle_32 * unsigned(rotate_right(result, n));
+    result <= unsigned(rotate_right((result + unsigned(rotate_left(1, (q-a-1)))), (q-a)));
 
     -- Output assignment
     process(clk)
