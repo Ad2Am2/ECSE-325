@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11e MIXED_VERSIONS
 13
 !s112 1.1
 !i10d 8192
@@ -8,3 +9,46 @@ z2
 !i10f 100
 cModel Technology
 dC:/intelFPGA/23.1std
+Esine_approximation
+Z0 w1711643391
+Z1 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z2 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z3 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 8
+Z4 d//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325
+Z5 8//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/part2imp1.vhd
+Z6 F//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/part2imp1.vhd
+l0
+L5 1
+VF:B?=<0KbBaWjUj<iBG[41
+!s100 [BmIA8z=k3Na><d^:Z]AQ3
+Z7 OL;C;2023.3;77
+32
+Z8 !s110 1711643400
+!i10b 1
+Z9 !s108 1711643400.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/part2imp1.vhd|
+!s107 //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/part2imp1.vhd|
+!i113 0
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+DEx4 work 18 sine_approximation 0 22 F:B?=<0KbBaWjUj<iBG[41
+!i122 8
+l25
+L11 42
+VY[iLUacBEg2@XS4f44Gbg0
+!s100 hS<[kNg1?dVZ[`ejC6hLM3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+Z13 !s107 //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/part2imp1.vhd|
+!i113 0
+R11
+R12
