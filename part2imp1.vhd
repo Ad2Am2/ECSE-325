@@ -18,6 +18,7 @@ architecture Behavioral of sine_approximation is
     constant q : integer := 31;
     constant r : integer := 3;
     constant a : integer := 12;
+    constant one : unsigned(31 downto 0) := X"00000001";
     
     signal angle_32 : unsigned(31 downto 0);
     signal result : unsigned(31 downto 0);
@@ -38,7 +39,7 @@ begin
     result <= angle_32 * unsigned(rotate_right(result, n));
     result <= A1 - unsigned(rotate_right(result, (p-q)));
     result <= angle_32 * unsigned(rotate_right(result, n));
-    result <= unsigned(rotate_right((result + unsigned(rotate_left(1, (q-a-1)))), (q-a)));
+    result <= unsigned(rotate_right((result + unsigned(rotate_left(one, (q-a-1)))), (q-a)));
 
     -- Output assignment
     process(clk)
