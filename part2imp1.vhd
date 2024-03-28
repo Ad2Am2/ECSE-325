@@ -12,7 +12,7 @@ architecture Behavioral of sine_approximation is
     -- Constants definition
     constant A1 : unsigned(31 downto 0) := X"C8EC8A4B"; -- Hexadecimal representation
     constant B1 : unsigned(31 downto 0) := X"A3B2292C"; -- Hexadecimal representation
-    constant C1 : unsigned(31 downto 0) := X"47645"; -- Hexadecimal representation
+    constant C1 : unsigned(31 downto 0) := X"00047645"; -- Hexadecimal representation
     constant n : integer := 13;
     constant p : integer := 32;
     constant q : integer := 31;
