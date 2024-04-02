@@ -18,11 +18,11 @@ architecture Behavioral of sine_approximation is
 --    constant q : integer := 31;
 --    constant r : integer := 3;
 --    constant a : integer := 12;
-    constant n : unsigned(3 downto 0) := "1101"; -- 13
-    constant p : unsigned(4 downto 0) := "100000"; -- 32
-    constant q : unsigned(4 downto 0) := "011111"; -- 31
-    constant r : unsigned(1 downto 0) := "11"; -- 3
-    constant a : unsigned(3 downto 0) := "1100"; -- 12
+    constant n : unsigned(31 downto 0) := "1101"; -- 13
+    constant p : unsigned(31 downto 0) := "100000"; -- 32
+    constant q : unsigned(31 downto 0) := "011111"; -- 31
+    constant r : unsigned(31 downto 0) := "11"; -- 3
+    constant a : unsigned(31 downto 0) := "1100"; -- 12
 
     constant one : unsigned(31 downto 0) := X"00000001";
     
@@ -50,7 +50,7 @@ begin
 --    result <= resize(unsigned(rotate_right((result6 + unsigned(rotate_left(one, (q-a-1)))), (q-a))), 32);
 
 --	 result <= resize(A1 - unsigned(rotate_right((angle_32 * unsigned(rotate_right((B1 - unsigned(rotate_right((angle_32 * unsigned(rotate_right((C1 * angle_32), n)), r)), n))), n)), (p - q))), 32);
-	 result <= resize(A1 - rotate_right((angle_32 * rotate_right((B1 - rotate_right((angle_32 * rotate_right((C1 * angle_32), n), r)), n)), n), (p - q)), 32);
+	 result <= resize(A1 - rotate_right((angle_32 * rotate_right((B1 - rotate_right((angle_32 * rotate_right((C1 * angle_32), 13), 3)), 13)), 13), 1), 32);
 
 	 
 	 
