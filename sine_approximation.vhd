@@ -41,16 +41,16 @@ begin
     -- Implementation of the given formula
     -- result <= (angle_32 * (A1 - ((2**(q-p)) * angle_32 * (angle_32 srl n) * (B1 - ((angle_32 srl (n+r)) * C1 * (angle_32 srl n)))))) srl (n+q-a);
 
---    result1 <= resize(unsigned(rotate_right((C1 * angle_32), n)), 32);
---    result2 <= resize(B1 - unsigned(rotate_right((angle_32 * result1), r)), 32);
---    result3 <= resize(angle_32 * unsigned(rotate_right(result2, n)), 32);
---    result4 <= resize(angle_32 * unsigned(rotate_right(result3, n)), 32);
---    result5 <= resize(A1 - unsigned(rotate_right(result4, (p-q))), 32);
---    result6 <= resize(angle_32 * unsigned(rotate_right(result5, n)), 32);
---    result <= resize(unsigned(rotate_right((result6 + unsigned(rotate_left(one, (q-a-1)))), (q-a))), 32);
+    result1 <= resize(unsigned(rotate_right((C1 * angle_32), 13)), 32);
+    result2 <= resize(B1 - unsigned(rotate_right((angle_32 * result1), 3)), 32);
+    result3 <= resize(angle_32 * unsigned(rotate_right(result2, 13)), 32);
+    result4 <= resize(angle_32 * unsigned(rotate_right(result3, 13)), 32);
+    result5 <= resize(A1 - unsigned(rotate_right(result4, 1)), 32);
+    result6 <= resize(angle_32 * unsigned(rotate_right(result5, 13)), 32);
+    result <= resize(unsigned(rotate_right((result6 + unsigned(rotate_left(one, 18))), (19))), 32);
 
 --	 result <= resize(A1 - unsigned(rotate_right((angle_32 * unsigned(rotate_right((B1 - unsigned(rotate_right((angle_32 * unsigned(rotate_right((C1 * angle_32), n)), r)), n))), n)), (p - q))), 32);
-	 result <= resize(A1 - rotate_right((angle_32 * rotate_right((B1 - rotate_right((angle_32 * rotate_right((C1 * angle_32), 13), 3)), 13)), 13), 1), 32);
+--	 result <= resize(A1 - rotate_right((angle_32 * rotate_right((B1 - rotate_right((angle_32 * rotate_right((C1 * angle_32), 13), 3)), 13)), 13), 1), 32);
 
 	 
 	 
