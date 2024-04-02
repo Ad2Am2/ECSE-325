@@ -18,7 +18,7 @@
 -- suit user's needs .Comments are provided in each section to help the user  
 -- fill out necessary details.                                                
 -- ***************************************************************************
--- Generated on "04/02/2024 16:54:45"
+-- Generated on "04/02/2024 17:06:27"
                                                             
 -- Vhdl Test Bench template for design  :  sine_approximation_pipelined
 -- 

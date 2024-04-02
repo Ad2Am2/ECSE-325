@@ -1,5 +1,5 @@
 Flow report for lab3_part2
-Tue Apr  2 16:54:45 2024
+Tue Apr  2 17:06:27 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Tue Apr  2 16:54:45 2024          ;
+; Flow Status                     ; Successful - Tue Apr  2 17:06:27 2024          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; lab3_part2                                     ;
 ; Top-level Entity Name           ; sine_approximation_pipelined                   ;
@@ -113,7 +113,11 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4739 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4739 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4739 MB             ; 00:00:00                           ;
-; Total                ; 00:01:12     ; --                      ; --                  ; 00:00:44                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4739 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4739 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4739 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4739 MB             ; 00:00:00                           ;
+; Total                ; 00:01:18     ; --                      ; --                  ; 00:00:44                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -131,6 +135,10 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -142,6 +150,10 @@ quartus_fit --read_settings_files=off --write_settings_files=off lab3_part2 -c l
 quartus_asm --read_settings_files=off --write_settings_files=off lab3_part2 -c lab3_part2
 quartus_sta lab3_part2 -c lab3_part2
 quartus_eda --read_settings_files=off --write_settings_files=off lab3_part2 -c lab3_part2
+quartus_eda --read_settings_files=on --write_settings_files=off lab3_part2 -c lab3_part2 --gen_testbench
+quartus_eda --read_settings_files=on --write_settings_files=off lab3_part2 -c lab3_part2 --gen_testbench
+quartus_eda --read_settings_files=on --write_settings_files=off lab3_part2 -c lab3_part2 --gen_testbench
+quartus_eda --read_settings_files=on --write_settings_files=off lab3_part2 -c lab3_part2 --gen_testbench
 quartus_eda --read_settings_files=on --write_settings_files=off lab3_part2 -c lab3_part2 --gen_testbench
 quartus_eda --read_settings_files=on --write_settings_files=off lab3_part2 -c lab3_part2 --gen_testbench
 quartus_eda --read_settings_files=on --write_settings_files=off lab3_part2 -c lab3_part2 --gen_testbench
