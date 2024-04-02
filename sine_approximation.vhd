@@ -18,11 +18,11 @@ architecture Behavioral of sine_approximation is
 --    constant q : integer := 31;
 --    constant r : integer := 3;
 --    constant a : integer := 12;
-    constant n : unsigned(31 downto 0) := "1101"; -- 13
-    constant p : unsigned(31 downto 0) := "100000"; -- 32
-    constant q : unsigned(31 downto 0) := "011111"; -- 31
-    constant r : unsigned(31 downto 0) := "11"; -- 3
-    constant a : unsigned(31 downto 0) := "1100"; -- 12
+    constant n : unsigned(31 downto 0) := "00000000000000000000000000001101"; -- 13
+    constant p : unsigned(31 downto 0) := "00000000000000000000000000100000"; -- 32
+    constant q : unsigned(31 downto 0) := "00000000000000000000000000011111"; -- 31
+    constant r : unsigned(31 downto 0) := "00000000000000000000000000000011"; -- 3
+    constant a : unsigned(31 downto 0) := "00000000000000000000000000001100"; -- 12
 
     constant one : unsigned(31 downto 0) := X"00000001";
     
@@ -59,7 +59,7 @@ begin
     begin
         if rising_edge(clk) then
             -- Adjust the output to fit the expected 13-bit format by scaling down the result appropriately
-            sine_out <= resize(result srl (32 - a), 13);
+            sine_out <= resize(rotate_right(result, 20), 13);
         end if;
     end process;
 end Behavioral;

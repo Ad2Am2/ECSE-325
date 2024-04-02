@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab3_part2
-Tue Apr  2 11:43:13 2024
+Tue Apr  2 13:45:07 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Apr  2 11:43:13 2024              ;
+; Analysis & Synthesis Status ; Failed - Tue Apr  2 13:45:07 2024              ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; lab3_part2                                     ;
 ; Top-level Entity Name       ; sine_approximation                             ;
@@ -161,22 +161,20 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Apr  2 11:43:07 2024
+    Info: Processing started: Tue Apr  2 13:45:02 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3_part2 -c lab3_part2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file sine_approximation.vhd
     Info (12022): Found design unit 1: sine_approximation-Behavioral File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/sine_approximation.vhd Line: 11
     Info (12023): Found entity 1: sine_approximation File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/sine_approximation.vhd Line: 5
-Error (10327): VHDL error at sine_approximation.vhd(56): can't determine definition of operator ""*"" -- found 0 possible definitions File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/sine_approximation.vhd Line: 56
-Error (10517): VHDL type mismatch error at sine_approximation.vhd(56): std_ulogic type does not match integer literal File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/sine_approximation.vhd Line: 56
-Error (10346): VHDL error at sine_approximation.vhd(56): formal port or parameter "COUNT" must have actual or default value File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/sine_approximation.vhd Line: 56
-Error (10784): HDL error at numeric_std_vhdl1993.vhd(584): see declaration for object "COUNT" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/ieee/1993/numeric_std_vhdl1993.vhd Line: 584
-Error (10327): VHDL error at sine_approximation.vhd(56): can't determine definition of operator ""-"" -- found 0 possible definitions File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/sine_approximation.vhd Line: 56
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 5 errors, 1 warning
-    Error: Peak virtual memory: 4863 megabytes
-    Error: Processing ended: Tue Apr  2 11:43:13 2024
+Info (12127): Elaborating entity "sine_approximation" for the top level hierarchy
+Error (10324): VHDL Expression error at sine_approximation.vhd(21): expression ""1101"" has 4 elements ; expected 32 elements. File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/sine_approximation.vhd Line: 21
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 4869 megabytes
+    Error: Processing ended: Tue Apr  2 13:45:08 2024
     Error: Elapsed time: 00:00:06
-    Error: Total CPU time (on all processors): 00:00:02
+    Error: Total CPU time (on all processors): 00:00:04
 
 
