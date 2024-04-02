@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g31_SHA256
-Tue Apr  2 15:14:20 2024
+Tue Apr  2 17:16:40 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Apr  2 15:14:20 2024              ;
+; Analysis & Synthesis Status ; Failed - Tue Apr  2 17:16:40 2024              ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; g31_SHA256                                     ;
 ; Top-level Entity Name       ; g31_SHA256                                     ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Apr  2 15:14:15 2024
+    Info: Processing started: Tue Apr  2 17:16:35 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g31_SHA256 -c g31_SHA256
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -169,18 +169,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file lab2/g3
     Info (12022): Found design unit 1: g31_SIG_CH_MAJ-Behavioral File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/lab2/g31_SIG_CH_MAJ.vhd Line: 24
     Info (12023): Found entity 1: g31_SIG_CH_MAJ File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/lab2/g31_SIG_CH_MAJ.vhd Line: 18
 Info (12021): Found 2 design units, including 1 entities, in source file g31_sha256.vhd
-    Info (12022): Found design unit 1: g31_SHA256-lab3 File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_SHA256.vhd Line: 19
-    Info (12023): Found entity 1: g31_SHA256 File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_SHA256.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file g31_hash_core.vhd
-    Info (12022): Found design unit 1: g31_Hash_Core-Behavioral File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 24
+    Info (12022): Found design unit 1: g31_SHA256-lab3 File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_SHA256.vhd Line: 21
+    Info (12023): Found entity 1: g31_SHA256 File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_SHA256.vhd Line: 13
+Info (12021): Found 4 design units, including 2 entities, in source file g31_hash_core.vhd
+    Info (12022): Found design unit 1: g31_Hash_Core-Behavioral File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 25
+    Info (12022): Found design unit 2: g31_Message_Schedule-Behavioral File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 146
     Info (12023): Found entity 1: g31_Hash_Core File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 13
-Error (10305): VHDL Type Conversion error at g31_Hash_Core.vhd(110): cannot convert type "constant_array" to type "UNSIGNED" File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 110
-Error (10552): VHDL expression error at g31_Hash_Core.vhd(110): illegal UNSIGNED in expression File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 110
-Error (10411): VHDL Type Conversion error at g31_Hash_Core.vhd(110): can't determine type of object or expression near text or symbol "std_logic_vector" File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 110
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
+    Info (12023): Found entity 2: g31_Message_Schedule File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 137
+Error (10305): VHDL Type Conversion error at g31_Hash_Core.vhd(114): cannot convert type "constant_array" to type "UNSIGNED" File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 114
+Error (10552): VHDL expression error at g31_Hash_Core.vhd(114): illegal UNSIGNED in expression File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 114
+Error (10411): VHDL Type Conversion error at g31_Hash_Core.vhd(114): can't determine type of object or expression near text or symbol "std_logic_vector" File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 114
+Error (10482): VHDL error at g31_Hash_Core.vhd(111): object "Wt" is used but not declared File: //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/g31_Hash_Core.vhd Line: 111
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 1 warning
     Error: Peak virtual memory: 4863 megabytes
-    Error: Processing ended: Tue Apr  2 15:14:20 2024
-    Error: Elapsed time: 00:00:05
-    Error: Total CPU time (on all processors): 00:00:04
+    Error: Processing ended: Tue Apr  2 17:16:41 2024
+    Error: Elapsed time: 00:00:06
+    Error: Total CPU time (on all processors): 00:00:03
 
 

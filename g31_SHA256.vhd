@@ -7,6 +7,8 @@
 
 library ieee; -- allows use of the std_logic_vector type
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
 
 entity g31_SHA256 is -- to be changed in future labs
     port (
@@ -42,14 +44,23 @@ architecture lab3 of g31_SHA256 is
     END COMPONENT;
 
 
-
     begin
         i1 : g31_Hash_Core
             PORT MAP (A_o => A_o,B_o => B_o,C_o => C_o,D_o => D_o,E_o => E_o,
             F_o => F_o,G_o => G_o,H_o => H_o,A_i => h0,B_i => h1,C_i => h2,D_i => h3,
             E_i => h4,F_i => h5,G_i => h6,H_i => h7,Kt_i => Kt,Wt_i => Wt,
             LD => LD, CLK => CLK );
-                hash_out <= A_o & B_o & C_o & D_o & E_o & F_o & G_o & H_o;
+--                hash_out <= A_o & B_o & C_o & D_o & E_o & F_o & G_o & H_o;
+					 h0 <= std_logic_vector(unsigned(h0) + unsigned(A_o));
+					 h1 <= std_logic_vector(unsigned(h1) + unsigned(A_o));
+					 h2 <= std_logic_vector(unsigned(h2) + unsigned(A_o));
+					 h3 <= std_logic_vector(unsigned(h3) + unsigned(A_o));
+					 h4 <= std_logic_vector(unsigned(h4) + unsigned(A_o));
+					 h5 <= std_logic_vector(unsigned(h5) + unsigned(A_o));
+					 h6 <= std_logic_vector(unsigned(h6) + unsigned(A_o));
+					 h7 <= std_logic_vector(unsigned(h7) + unsigned(A_o));
+					 
+					 hash_out <= h0 & h1 & h2 & h3 & h4 & h5 & h6 & h7;
                 -- concatenate to form the 256 bit hash output
                 process(RESET, CLK)
                 begin

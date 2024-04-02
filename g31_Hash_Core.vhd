@@ -11,11 +11,12 @@ use ieee.numeric_std.all; -- needed if you are using unsigned rotate operations
 
 
 entity g31_Hash_Core is
-    port ( A_o, B_o, C_o, D_o, E_o, F_o, G_o, H_o : inout std_logic_vector(31 downto 0);
-    A_i, B_i, C_i, D_i, E_i, F_i, G_i, H_i : in std_logic_vector(31 downto 0);
-    Kt_i, Wt_i : in std_logic_vector(31 downto 0);
-    LD, CLK: in std_logic
-);
+    port (
+        A_o, B_o, C_o, D_o, E_o, F_o, G_o, H_o : inout std_logic_vector(31 downto 0);
+        A_i, B_i, C_i, D_i, E_i, F_i, G_i, H_i : in std_logic_vector(31 downto 0);
+        Kt_i, Wt_i : in std_logic_vector(31 downto 0);
+        LD, CLK: in std_logic
+    );
 end g31_Hash_Core;
 
 
@@ -33,7 +34,7 @@ architecture Behavioral of g31_Hash_Core is
 	-- Internal signals
 	signal A_reg, B_reg, C_reg, D_reg, E_reg, F_reg, G_reg, H_reg : std_logic_vector(31 downto 0);
 	--    signal Kt, Wt : std_logic_vector(31 downto 0);
-	signal Wt : std_logic_vector(31 downto 0);
+--	signal Wt : std_logic_vector(31 downto 0);
 	signal SIG0, SIG1, CH, MAJ : std_logic_vector(31 downto 0);
 	signal A_reg_next, E_reg_next, RESTOFSTUFF : std_logic_vector(31 downto 0);
 
@@ -50,6 +51,9 @@ architecture Behavioral of g31_Hash_Core is
 	x"391c0cb3", x"4ed8aa4a", x"5b9cca4f", x"682e6ff3", x"748f82ee", x"78a5636f",
 	x"84c87814", x"8cc70208", x"90befffa", x"a4506ceb", x"bef9a3f7", x"c67178f2"
 	);
+	
+	type std_logic_vector_array is array (0 to 63) of std_logic_vector(31 downto 0);
+	signal Wt_schedule : std_logic_vector_array;
 
 begin
 
@@ -126,5 +130,34 @@ begin
     G_o <= G_reg;
     H_o <= H_reg;
 
+end Behavioral;
+
+
+
+entity g31_Message_Schedule is
+    port (
+        M_i : in std_logic_vector(31 downto 0);
+        LD_i : in std_logic;
+        Wt_o : out std_logic_vector(31 downto 0);
+        CLK : in std_logic
+    );
+end g31_Message_Schedule;
+
+architecture Behavioral of g31_Message_Schedule is
+    signal Wt_reg : std_logic_vector(31 downto 0);
+begin
+    process (CLK)
+    begin
+        if rising_edge(CLK) then
+            if LD_i = '1' then
+                Wt_reg <= M_i;
+            else
+                -- Implement the logic to generate the message schedule
+                -- based on the previous Wt and the hashing algorithm
+            end if;
+        end if;
+    end process;
+
+    Wt_o <= Wt_reg;
 end Behavioral;
 
