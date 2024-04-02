@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Failed - Tue Apr  2 13:45:07 2024
+Analysis & Synthesis Status : Failed - Tue Apr  2 14:04:56 2024
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : lab3_part2
-Top-level Entity Name : sine_approximation
+Top-level Entity Name : sine_approximation_pipelined
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
