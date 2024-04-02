@@ -1,0 +1,117 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sine_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sine_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sine_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sine_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sine_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sine_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sine_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sine_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sine_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sine_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sine_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sine_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sine_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "angle[0]",
+					"strict" : false
+				},
+				{
+					"name" : "angle[1]",
+					"strict" : false
+				},
+				{
+					"name" : "angle[2]",
+					"strict" : false
+				},
+				{
+					"name" : "angle[3]",
+					"strict" : false
+				},
+				{
+					"name" : "angle[4]",
+					"strict" : false
+				},
+				{
+					"name" : "angle[5]",
+					"strict" : false
+				},
+				{
+					"name" : "angle[6]",
+					"strict" : false
+				},
+				{
+					"name" : "angle[7]",
+					"strict" : false
+				},
+				{
+					"name" : "angle[8]",
+					"strict" : false
+				},
+				{
+					"name" : "angle[9]",
+					"strict" : false
+				},
+				{
+					"name" : "angle[10]",
+					"strict" : false
+				},
+				{
+					"name" : "angle[11]",
+					"strict" : false
+				},
+				{
+					"name" : "angle[12]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,5 +1,5 @@
 Flow report for lab3_part2
-Tue Apr  2 13:35:39 2024
+Tue Apr  2 16:54:45 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -38,24 +38,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+-----------------------------+------------------------------------------------+
-; Flow Status                 ; Flow Failed - Tue Apr  2 13:35:39 2024         ;
-; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
-; Revision Name               ; lab3_part2                                     ;
-; Top-level Entity Name       ; sine_approximation                             ;
-; Family                      ; Cyclone V                                      ;
-; Device                      ; 5CSEMA5F31C6                                   ;
-; Timing Models               ; Final                                          ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
-; Total registers             ; N/A until Partition Merge                      ;
-; Total pins                  ; N/A until Partition Merge                      ;
-; Total virtual pins          ; N/A until Partition Merge                      ;
-; Total block memory bits     ; N/A until Partition Merge                      ;
-; Total PLLs                  ; N/A until Partition Merge                      ;
-; Total DLLs                  ; N/A until Partition Merge                      ;
-+-----------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++---------------------------------+------------------------------------------------+
+; Flow Status                     ; Successful - Tue Apr  2 16:54:45 2024          ;
+; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name                   ; lab3_part2                                     ;
+; Top-level Entity Name           ; sine_approximation_pipelined                   ;
+; Family                          ; Cyclone V                                      ;
+; Device                          ; 5CSEMA5F31C6                                   ;
+; Timing Models                   ; Final                                          ;
+; Logic utilization (in ALMs)     ; 66 / 32,070 ( < 1 % )                          ;
+; Total registers                 ; 13                                             ;
+; Total pins                      ; 27 / 457 ( 6 % )                               ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
+; Total DSP Blocks                ; 11 / 87 ( 13 % )                               ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                                  ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
++---------------------------------+------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,35 +68,35 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/02/2024 13:35:34 ;
+; Start date & time ; 04/02/2024 14:31:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lab3_part2          ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                      ;
-+-------------------------------------+----------------------------------------+---------------+--------------------+-----------------------------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name        ; Section Id                        ;
-+-------------------------------------+----------------------------------------+---------------+--------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 35768770662387.171207933418292         ; --            ; --                 ; --                                ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --                 ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --                 ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --                 ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --                 ; eda_board_design_symbol           ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --                 ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                 ; QuestaSim (Verilog)                    ; <None>        ; --                 ; --                                ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --                 ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                 ; --                                ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                 ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; sine_approximation ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; sine_approximation ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; sine_approximation ; Top                               ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --                 ; --                                ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                 ; --                                ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --                 ; --                                ;
-; TOP_LEVEL_ENTITY                    ; sine_approximation                     ; lab3_part2    ; --                 ; --                                ;
-+-------------------------------------+----------------------------------------+---------------+--------------------+-----------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                ;
++-------------------------------------+----------------------------------------+---------------+------------------------------+-----------------------------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name                  ; Section Id                        ;
++-------------------------------------+----------------------------------------+---------------+------------------------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID               ; 35768770661465.171208266507612         ; --            ; --                           ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --                           ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --                           ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --                           ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --                           ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --                           ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                 ; QuestaSim (Verilog)                    ; <None>        ; --                           ; --                                ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --                           ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                           ; --                                ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                           ; --                                ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; sine_approximation_pipelined ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; sine_approximation_pipelined ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; sine_approximation_pipelined ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --                           ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                           ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --                           ; --                                ;
+; TOP_LEVEL_ENTITY                    ; sine_approximation_pipelined           ; lab3_part2    ; --                           ; --                                ;
++-------------------------------------+----------------------------------------+---------------+------------------------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -99,8 +104,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4855 MB             ; 00:00:04                           ;
-; Total                ; 00:00:06     ; --                      ; --                  ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4926 MB             ; 00:00:01                           ;
+; Fitter               ; 00:00:43     ; 1.0                     ; 8038 MB             ; 00:00:41                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4894 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.2                     ; 5304 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4743 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4739 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4739 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4739 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4739 MB             ; 00:00:00                           ;
+; Total                ; 00:01:12     ; --                      ; --                  ; 00:00:44                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,7 +122,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; 156TR4180-13     ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; 156TR4180-09     ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -117,6 +138,14 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off lab3_part2 -c lab3_part2
+quartus_fit --read_settings_files=off --write_settings_files=off lab3_part2 -c lab3_part2
+quartus_asm --read_settings_files=off --write_settings_files=off lab3_part2 -c lab3_part2
+quartus_sta lab3_part2 -c lab3_part2
+quartus_eda --read_settings_files=off --write_settings_files=off lab3_part2 -c lab3_part2
+quartus_eda --read_settings_files=on --write_settings_files=off lab3_part2 -c lab3_part2 --gen_testbench
+quartus_eda --read_settings_files=on --write_settings_files=off lab3_part2 -c lab3_part2 --gen_testbench
+quartus_eda --read_settings_files=on --write_settings_files=off lab3_part2 -c lab3_part2 --gen_testbench
+quartus_eda --read_settings_files=on --write_settings_files=off lab3_part2 -c lab3_part2 --gen_testbench
 
 
 
