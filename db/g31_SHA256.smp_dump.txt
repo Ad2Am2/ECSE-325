@@ -1,6 +1,0 @@
-
-State Machine - |g31_SHA256|state
-Name state.IDLE state.RUN state.INIT 
-state.INIT 0 0 0 
-state.RUN 0 1 1 
-state.IDLE 1 0 1 
