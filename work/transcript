@@ -1,14 +1,96 @@
 # Compile of sine_approximation.vhd was successful.
 # Compile of sine_approximation_pipelined.vhd was successful.
-# 2 compiles, 0 failed with no errors.
-vsim work.sine_approximation_pipelined
-# vsim work.sine_approximation_pipelined 
-# Start time: 14:21:38 on Apr 02,2024
-# ** Note: (vsim-3812) Design is being optimized...
+# Compile of sine_approximation.vht was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.sine_approximation_vhd_tst -voptargs=+acc
+# vsim work.sine_approximation_vhd_tst -voptargs="+acc" 
+# Start time: 13:26:53 on Apr 04,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.sine_approximation_pipelined(behavioral)#1
-# End time: 16:56:31 on Apr 02,2024, Elapsed time: 2:34:53
-# Errors: 0, Warnings: 5
+# Loading work.sine_approximation_vhd_tst(sine_approximation_arch)#1
+# Loading work.sine_approximation(behavioral)#1
+add wave -position end  sim:/sine_approximation_vhd_tst/angle
+add wave -position end  sim:/sine_approximation_vhd_tst/clk
+add wave -position end  sim:/sine_approximation_vhd_tst/sine_out
+run
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.sine_approximation_vhd_tst
+# End time: 13:34:21 on Apr 04,2024, Elapsed time: 0:07:28
+# Errors: 0, Warnings: 4
+# vsim -voptargs="+acc" work.sine_approximation_vhd_tst 
+# Start time: 13:34:22 on Apr 04,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_vhd_tst(sine_approximation_arch)#1
+# Loading work.sine_approximation(behavioral)#1
+add wave -position end  sim:/sine_approximation_vhd_tst/angle
+add wave -position end  sim:/sine_approximation_vhd_tst/clk
+add wave -position end  sim:/sine_approximation_vhd_tst/sine_out
+run
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.sine_approximation_vhd_tst
+# End time: 13:38:09 on Apr 04,2024, Elapsed time: 0:03:47
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" work.sine_approximation_vhd_tst 
+# Start time: 13:38:09 on Apr 04,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_vhd_tst(sine_approximation_arch)#1
+# Loading work.sine_approximation(behavioral)#1
+add wave -position end  sim:/sine_approximation_vhd_tst/angle
+add wave -position end  sim:/sine_approximation_vhd_tst/clk
+add wave -position end  sim:/sine_approximation_vhd_tst/sine_out
+run
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.sine_approximation_vhd_tst
+# End time: 13:38:55 on Apr 04,2024, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" work.sine_approximation_vhd_tst 
+# Start time: 13:38:55 on Apr 04,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_vhd_tst(sine_approximation_arch)#1
+# Loading work.sine_approximation(behavioral)#1
+add wave -position end  sim:/sine_approximation_vhd_tst/angle
+add wave -position end  sim:/sine_approximation_vhd_tst/clk
+add wave -position end  sim:/sine_approximation_vhd_tst/sine_out
+run
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# 3 compiles, 0 failed with no errors.
+run
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# 3 compiles, 0 failed with no errors.
+run
+# Causality operation skipped due to absence of debug database file

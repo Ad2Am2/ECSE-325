@@ -10,9 +10,9 @@ ARCHITECTURE sine_approximation_arch OF sine_approximation_vhd_tst IS
     -- Constants declaration (if any)
 
     -- Signals declaration
-    SIGNAL angle : unsigned(12 DOWNTO 0) := (others => '0'); -- Initialize angle to 0
+    SIGNAL angle : STD_LOGIC_VECTOR(12 DOWNTO 0) := (others => '0'); -- Initialize angle to 0
     SIGNAL clk : STD_LOGIC := '0'; -- Initialize clock
-    SIGNAL sine_out : unsigned(12 DOWNTO 0);
+    SIGNAL sine_out : STD_LOGIC_VECTOR(12 DOWNTO 0);
 
     -- Component declaration
     COMPONENT sine_approximation
@@ -36,7 +36,7 @@ BEGIN
     -- Clock process
     clk_process: PROCESS
     BEGIN
-        while now < 500 ns loop  -- Simulation time 200 ns
+        while now < 200 ns loop  -- Simulation time 200 ns
             clk <= not clk;  -- Toggle the clock
             wait for 5 ns;  -- Clock period of 10 ns
         end loop;
@@ -47,24 +47,17 @@ BEGIN
     stimulus_process: PROCESS
     BEGIN
         -- Test with different input values
-        angle <= "1000000000000";  -- Input value for angle (pi/4 = 4096)
+        angle <= "0000000000001";  -- Input value for angle (example value)
         wait for 100 ns;  -- Wait for stable output
 
-        angle <= "1010101010101";  -- Another input value for angle (pi/3 = 5461)
+        angle <= "0010101010101";  -- Another input value for angle (example value)
         wait for 100 ns;  -- Wait for stable output
 
-        angle <= "0101010101011";  -- Another input value for angle (pi/6 = 2731)
+        angle <= "0101010101010";  -- Another input value for angle (example value)
         wait for 100 ns;  -- Wait for stable output
 
-	angle <= "0101010101010";  -- Another input value for angle (29.02962254 degrees = 2642)
+        angle <= "1111111111111";  -- Another input value for angle (example value)
         wait for 100 ns;  -- Wait for stable output
-
-	--angle <= "0101001010010";  -- Another input value for angle (29.02962254 degrees = 2642)
-        --wait for 100 ns;  -- Wait for stable output
-
-        angle <= "0101010101010";  -- Another input value for angle (29.02962254 degrees = 2642)
-        wait for 100 ns;  -- Wait for stable output
-
 
         wait;
     END PROCESS stimulus_process;
