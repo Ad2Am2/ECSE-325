@@ -511,3 +511,55 @@ add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/result
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 #           Using alternate file: ./wlftv4kj9w
 run
+run
+run
+run -all
+run -continue
+run
+run
+run
+run
+run
+# Load canceled
+vsim -voptargs=+acc work.sine_approximation_pipelined_vhd_tst
+# End time: 13:43:53 on Apr 05,2024, Elapsed time: 0:12:22
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" work.sine_approximation_pipelined_vhd_tst 
+# Start time: 13:43:53 on Apr 05,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_pipelined_vhd_tst(sine_approximation_pipelined_arch)#1
+# Loading work.sine_approximation_pipelined(no_pipeline)#1
+add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/i
+add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/clock
+add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/result
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: acorbi2  Hostname: 156TR4180-01  ProcessID: 18784
+#           Attempting to use alternate WLF file "./wlft6jind8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6jind8
+run
+vsim -voptargs=+acc work.sine_approximation_pipelined_vhd_tst
+# End time: 13:44:36 on Apr 05,2024, Elapsed time: 0:00:43
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" work.sine_approximation_pipelined_vhd_tst 
+# Start time: 13:44:36 on Apr 05,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_pipelined_vhd_tst(sine_approximation_pipelined_arch)#1
+# Loading work.sine_approximation_pipelined(no_pipeline)#1
+add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/i
+add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/clock
+add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/result
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: acorbi2  Hostname: 156TR4180-01  ProcessID: 18784
+#           Attempting to use alternate WLF file "./wlftztsqae".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftztsqae
+run
