@@ -22,12 +22,12 @@ architecture Behavioral of sine_approximation_pipelined is
 
     constant one : unsigned(31 downto 0) := X"00000001";
 
-    signal z_reg_1,z_reg_2,z_reg_3,z_reg_4,z_reg_5,z_reg_6,z_reg_7   : std_logic_vector(31 downto 0);
-    signal result1, result2, result3, result4, result5, result6, result7 : std_logic_vector(31 downto 0);
-    signal angle_reg_1, angle_reg_2, angle_reg_3, angle_reg_4, angle_reg_5  : std_logic_vector(31 downto 0);
-    signal angle_change : std_logic_vector(31 downto 0);
-    signal tmp1_1, tmp1_2, tmp1_3, tmp1_4,tmp1_6     : std_logic_vector(63 downto 0);
-    signal tmp2_1, tmp2_2                            : std_logic_vector(31 downto 0);
+    signal z_reg_1,z_reg_2,z_reg_3,z_reg_4,z_reg_5,z_reg_6,z_reg_7   : unsigned(31 downto 0);
+    signal result1, result2, result3, result4, result5, result6, result7 : unsigned(31 downto 0);
+    signal angle_reg_1, angle_reg_2, angle_reg_3, angle_reg_4, angle_reg_5  : unsigned(31 downto 0);
+    signal angle_change : unsigned(31 downto 0);
+    signal tmp1_1, tmp1_2, tmp1_3, tmp1_4,tmp1_6     : unsigned(63 downto 0);
+    signal tmp2_1, tmp2_2                            : unsigned(31 downto 0);
     
     signal angle_32 : unsigned(31 downto 0);
     signal result : unsigned(31 downto 0);
@@ -55,14 +55,14 @@ begin
         end if;
     end process;
 
-    angle_change <= "0000000000000000"&angle;
+    angle_change <= "0000000000000000"&angle_32;
     tmp1_1 <= std_logic_vector(unsigned(C1)*unsigned(angle_change));
     result1 <= "0000000000000"&tmp1_1(31 downto 13);
     
     --angle_reg_1 <= angle_change;
     tmp1_2 <= std_logic_vector(unsigned(z_reg_1)*unsigned(angle_reg_1));
     --tmp2 <= "000"&tmp1(31 downto 3);
-    result2 <= std_logic_vector(unsigned(B1)-unsigned("00z0"&tmp1_2(31 downto 3)));
+    result2 <= std_logic_vector(unsigned(B1)-unsigned("0010"&tmp1_2(31 downto 3)));
     
     --angle_reg_2 <= angle_reg_1;
     tmp1_3 <= std_logic_vector(unsigned(angle_reg_2)*(unsigned("0000000000000"&z_reg_2(31 downto 13))));
