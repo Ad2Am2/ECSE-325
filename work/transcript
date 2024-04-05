@@ -323,3 +323,191 @@ add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/sine_out
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 #           Using alternate file: ./wlft1twn3w
 run
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd failed with 28 errors.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht was successful.
+# 4 compiles, 1 failed with 28 errors.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd failed with 4 errors.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht was successful.
+# 4 compiles, 1 failed with 4 errors.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd failed with 12 errors.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht was successful.
+# 4 compiles, 1 failed with 12 errors.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd failed with 3 errors.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht was successful.
+# 4 compiles, 1 failed with 3 errors.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.sine_approximation_pipelined_vhd_tst
+# End time: 13:01:47 on Apr 05,2024, Elapsed time: 0:56:44
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.sine_approximation_pipelined_vhd_tst 
+# Start time: 13:01:47 on Apr 05,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_pipelined_vhd_tst(sine_approximation_pipelined_arch)#1
+# Loading work.sine_approximation_pipelined(behavioral)#1
+add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/angle
+add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/clk
+add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/sine_out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: acorbi2  Hostname: 156TR4180-01  ProcessID: 18784
+#           Attempting to use alternate WLF file "./wlftnz4693".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnz4693
+run
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht was successful.
+# 4 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.sine_approximation_pipelined_vhd_tst
+# End time: 13:07:33 on Apr 05,2024, Elapsed time: 0:05:46
+# Errors: 0, Warnings: 6
+# vsim -voptargs="+acc" work.sine_approximation_pipelined_vhd_tst 
+# Start time: 13:07:33 on Apr 05,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Error (suppressible): //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation_pipelined.vht(29): (vopt-1270) Bad default binding for component instance "i1: sine_approximation_pipelined".
+#  (Component port "sine_out" is not on the entity.)
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# End time: 13:07:34 on Apr 05,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht failed with 3 errors.
+# 4 compiles, 1 failed with 3 errors.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht failed with 12 errors.
+# 4 compiles, 1 failed with 12 errors.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht failed with 10 errors.
+# 4 compiles, 1 failed with 10 errors.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht failed with 4 errors.
+# 4 compiles, 1 failed with 4 errors.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht failed with 4 errors.
+# 4 compiles, 1 failed with 4 errors.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht failed with 4 errors.
+# 4 compiles, 1 failed with 4 errors.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht failed with 4 errors.
+# 4 compiles, 1 failed with 4 errors.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.sine_approximation_pipelined_vhd_tst
+# vsim -voptargs="+acc" work.sine_approximation_pipelined_vhd_tst 
+# Start time: 13:23:43 on Apr 05,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Error (suppressible): //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation_pipelined.vht(29): (vopt-1270) Bad default binding for component instance "i1: sine_approximation_pipelined".
+#  (Component port "clk" is not on the entity.)
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# End time: 13:23:44 on Apr 05,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 10
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht failed with 1 errors.
+# 4 compiles, 1 failed with 1 error.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht failed with 2 errors.
+# 4 compiles, 1 failed with 2 errors.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht failed with 1 errors.
+# 4 compiles, 1 failed with 1 error.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht failed with 3 errors.
+# 4 compiles, 1 failed with 3 errors.
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.sine_approximation_pipelined_vhd_tst
+# vsim -voptargs="+acc" work.sine_approximation_pipelined_vhd_tst 
+# Start time: 13:29:58 on Apr 05,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Error (suppressible): //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation_pipelined.vht(29): (vopt-1270) Bad default binding for component instance "i1: sine_approximation_pipelined".
+#  (Component port "clk" is not on the entity.)
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# End time: 13:29:59 on Apr 05,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 7
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# Compile of sine_approximation_pipelined.vht was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.sine_approximation_pipelined_vhd_tst
+# vsim -voptargs="+acc" work.sine_approximation_pipelined_vhd_tst 
+# Start time: 13:31:31 on Apr 05,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_pipelined_vhd_tst(sine_approximation_pipelined_arch)#1
+# Loading work.sine_approximation_pipelined(no_pipeline)#1
+add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/i
+add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/clock
+add wave -position end  sim:/sine_approximation_pipelined_vhd_tst/result
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: acorbi2  Hostname: 156TR4180-01  ProcessID: 18784
+#           Attempting to use alternate WLF file "./wlftv4kj9w".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftv4kj9w
+run
