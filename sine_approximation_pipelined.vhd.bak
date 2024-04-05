@@ -2,13 +2,13 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity sine_approximation is
+entity sine_approximation_pipelined is
     Port ( clk : in STD_LOGIC;
            angle : in unsigned(12 downto 0); -- 13-bit unsigned input
            sine_out : out unsigned(12 downto 0)); -- 13-bit unsigned output
-end sine_approximation;
+end sine_approximation_pipelined;
 
-architecture Behavioral of sine_approximation is
+architecture Behavioral of sine_approximation_pipelined is
     -- Constants definition
     constant A1 : unsigned(31 downto 0) := X"C8EC8A4B"; -- Hexadecimal representation
     constant B1 : unsigned(31 downto 0) := X"A3B2292C"; -- Hexadecimal representation
@@ -48,7 +48,7 @@ begin
     result4 <= resize(angle_32 * unsigned(rotate_right(piped_result3, 13)), 32);
     piped_result4 <= result4;
 
-    result5 <= resize(A1 - unsigned(rotate_right(piped_result4, 1)), 32);
+    result5 <= resize(A1 - unsigned(rotate_left(piped_result4, 1)), 32);
     piped_result5 <= result5;
 
     result6 <= resize(angle_32 * unsigned(rotate_right(piped_result5, 13)), 32);

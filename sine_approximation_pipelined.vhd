@@ -48,14 +48,14 @@ begin
     result4 <= resize(angle_32 * unsigned(rotate_right(piped_result3, 13)), 32);
     piped_result4 <= result4;
 
-    result5 <= resize(A1 - unsigned(rotate_right(piped_result4, 1)), 32);
+    result5 <= resize(A1 - unsigned(rotate_left(piped_result4, 1)), 32);
     piped_result5 <= result5;
 
     result6 <= resize(angle_32 * unsigned(rotate_right(piped_result5, 13)), 32);
     piped_result6 <= result6;
 
     -- Final result calculation
-    result <= resize(piped_result6 + unsigned(rotate_left(one, 18)), 32);
+    result <= resize(unsigned(rotate_right((piped_result6 + unsigned(rotate_left(one, 18))), (19))), 32);
 
     -- Output assignment
     process(clk)
