@@ -26,6 +26,8 @@ architecture Behavioral of sine_approximation_pipelined is
     signal result1, result2, result3, result4, result5, result6, result7 : std_logic_vector(31 downto 0);
     signal angle_reg_1, angle_reg_2, angle_reg_3, angle_reg_4, angle_reg_5  : std_logic_vector(31 downto 0);
     signal angle_change : std_logic_vector(31 downto 0);
+    signal tmp1_1, tmp1_2, tmp1_3, tmp1_4,tmp1_6     : std_logic_vector(63 downto 0);
+    signal tmp2_1, tmp2_2                            : std_logic_vector(31 downto 0);
     
     signal angle_32 : unsigned(31 downto 0);
     signal result : unsigned(31 downto 0);
@@ -53,7 +55,7 @@ begin
         end if;
     end process;
 
-    angle_change <= "0000000000000000"&i;
+    angle_change <= "0000000000000000"&angle;
     tmp1_1 <= std_logic_vector(unsigned(C1)*unsigned(angle_change));
     result1 <= "0000000000000"&tmp1_1(31 downto 13);
     
