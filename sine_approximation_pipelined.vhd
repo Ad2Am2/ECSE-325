@@ -2,16 +2,16 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity g06_Sine is
+entity sine_approximation_pipelined is
 port(
   clock   : in std_logic;
   i       : in std_logic_vector (15 downto 0);
   result  : out std_logic_vector (15 downto 0)
   --ecursion: out std_logic_vector(31 downto 0)
 );
-end g06_Sine;
+end sine_approximation_pipelined;
 
-architecture no_pipeline of g06_Sine is
+architecture no_pipeline of sine_approximation_pipelined is
 
 signal reg_out,reg_in  : std_logic_vector(15 downto 0);
 signal z_reg_1,z_reg_2,z_reg_3,z_reg_4,z_reg_5,z_reg_6,z_reg_7   : std_logic_vector(31 downto 0);
