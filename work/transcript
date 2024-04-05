@@ -2,10 +2,34 @@
 # Compile of sine_approximation_pipelined.vhd was successful.
 # Compile of sine_approximation.vht was successful.
 # 3 compiles, 0 failed with no errors.
+vsim work.sine_approximation_vhd_tst
+# vsim work.sine_approximation_vhd_tst 
+# Start time: 11:21:20 on Apr 05,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_vhd_tst(sine_approximation_arch)#1
+vsim work.sine_approximation_vhd_tst
+# End time: 11:21:59 on Apr 05,2024, Elapsed time: 0:00:39
+# Errors: 0, Warnings: 2
+# vsim work.sine_approximation_vhd_tst 
+# Start time: 11:21:59 on Apr 05,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_vhd_tst(sine_approximation_arch)#1
 vsim work.sine_approximation_vhd_tst -voptargs=+acc
+# End time: 11:22:25 on Apr 05,2024, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 1
 # vsim work.sine_approximation_vhd_tst -voptargs="+acc" 
-# Start time: 13:26:53 on Apr 04,2024
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 11:22:26 on Apr 05,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -15,16 +39,21 @@ vsim work.sine_approximation_vhd_tst -voptargs=+acc
 add wave -position end  sim:/sine_approximation_vhd_tst/angle
 add wave -position end  sim:/sine_approximation_vhd_tst/clk
 add wave -position end  sim:/sine_approximation_vhd_tst/sine_out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: acorbi2  Hostname: 156TR4180-01  ProcessID: 18784
+#           Attempting to use alternate WLF file "./wlftninm7t".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftninm7t
 run
 # Compile of sine_approximation.vhd was successful.
 # Compile of sine_approximation_pipelined.vhd was successful.
 # Compile of sine_approximation.vht was successful.
 # 3 compiles, 0 failed with no errors.
 vsim -voptargs=+acc work.sine_approximation_vhd_tst
-# End time: 13:34:21 on Apr 04,2024, Elapsed time: 0:07:28
-# Errors: 0, Warnings: 4
+# End time: 11:25:08 on Apr 05,2024, Elapsed time: 0:02:42
+# Errors: 0, Warnings: 5
 # vsim -voptargs="+acc" work.sine_approximation_vhd_tst 
-# Start time: 13:34:22 on Apr 04,2024
+# Start time: 11:25:08 on Apr 05,2024
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -37,16 +66,22 @@ vsim -voptargs=+acc work.sine_approximation_vhd_tst
 add wave -position end  sim:/sine_approximation_vhd_tst/angle
 add wave -position end  sim:/sine_approximation_vhd_tst/clk
 add wave -position end  sim:/sine_approximation_vhd_tst/sine_out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: acorbi2  Hostname: 156TR4180-01  ProcessID: 18784
+#           Attempting to use alternate WLF file "./wlftqy4t42".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqy4t42
 run
 # Compile of sine_approximation.vhd was successful.
 # Compile of sine_approximation_pipelined.vhd was successful.
 # Compile of sine_approximation.vht was successful.
 # 3 compiles, 0 failed with no errors.
+run
 vsim -voptargs=+acc work.sine_approximation_vhd_tst
-# End time: 13:38:09 on Apr 04,2024, Elapsed time: 0:03:47
-# Errors: 0, Warnings: 3
+# End time: 11:26:54 on Apr 05,2024, Elapsed time: 0:01:46
+# Errors: 0, Warnings: 5
 # vsim -voptargs="+acc" work.sine_approximation_vhd_tst 
-# Start time: 13:38:09 on Apr 04,2024
+# Start time: 11:26:54 on Apr 05,2024
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -59,38 +94,148 @@ vsim -voptargs=+acc work.sine_approximation_vhd_tst
 add wave -position end  sim:/sine_approximation_vhd_tst/angle
 add wave -position end  sim:/sine_approximation_vhd_tst/clk
 add wave -position end  sim:/sine_approximation_vhd_tst/sine_out
-run
-# Compile of sine_approximation.vhd was successful.
-# Compile of sine_approximation_pipelined.vhd was successful.
-# Compile of sine_approximation.vht was successful.
-# 3 compiles, 0 failed with no errors.
-vsim -voptargs=+acc work.sine_approximation_vhd_tst
-# End time: 13:38:55 on Apr 04,2024, Elapsed time: 0:00:46
-# Errors: 0, Warnings: 3
-# vsim -voptargs="+acc" work.sine_approximation_vhd_tst 
-# Start time: 13:38:55 on Apr 04,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.sine_approximation_vhd_tst(sine_approximation_arch)#1
-# Loading work.sine_approximation(behavioral)#1
-add wave -position end  sim:/sine_approximation_vhd_tst/angle
-add wave -position end  sim:/sine_approximation_vhd_tst/clk
-add wave -position end  sim:/sine_approximation_vhd_tst/sine_out
-run
-# Compile of sine_approximation.vht was successful.
-# Compile of sine_approximation.vhd was successful.
-# Compile of sine_approximation_pipelined.vhd was successful.
-# Compile of sine_approximation.vht was successful.
-# 3 compiles, 0 failed with no errors.
-run
-# Compile of sine_approximation.vhd was successful.
-# Compile of sine_approximation_pipelined.vhd was successful.
-# Compile of sine_approximation.vht was successful.
-# 3 compiles, 0 failed with no errors.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: acorbi2  Hostname: 156TR4180-01  ProcessID: 18784
+#           Attempting to use alternate WLF file "./wlft4ih79e".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4ih79e
 run
 # Causality operation skipped due to absence of debug database file
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.sine_approximation_vhd_tst
+# End time: 11:30:12 on Apr 05,2024, Elapsed time: 0:03:18
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" work.sine_approximation_vhd_tst 
+# Start time: 11:30:12 on Apr 05,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_vhd_tst(sine_approximation_arch)#1
+# Loading work.sine_approximation(behavioral)#1
+add wave -position end  sim:/sine_approximation_vhd_tst/angle
+add wave -position end  sim:/sine_approximation_vhd_tst/clk
+add wave -position end  sim:/sine_approximation_vhd_tst/sine_out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: acorbi2  Hostname: 156TR4180-01  ProcessID: 18784
+#           Attempting to use alternate WLF file "./wlfthg0gkm".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthg0gkm
+run
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.sine_approximation_vhd_tst
+# End time: 11:32:38 on Apr 05,2024, Elapsed time: 0:02:26
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" work.sine_approximation_vhd_tst 
+# Start time: 11:32:38 on Apr 05,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_vhd_tst(sine_approximation_arch)#1
+# Loading work.sine_approximation(behavioral)#1
+add wave -position end  sim:/sine_approximation_vhd_tst/angle
+add wave -position end  sim:/sine_approximation_vhd_tst/clk
+add wave -position end  sim:/sine_approximation_vhd_tst/sine_out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: acorbi2  Hostname: 156TR4180-01  ProcessID: 18784
+#           Attempting to use alternate WLF file "./wlfthjv0wz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthjv0wz
+run
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.sine_approximation_vhd_tst
+# End time: 11:34:54 on Apr 05,2024, Elapsed time: 0:02:16
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" work.sine_approximation_vhd_tst 
+# Start time: 11:34:54 on Apr 05,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_vhd_tst(sine_approximation_arch)#1
+# Loading work.sine_approximation(behavioral)#1
+add wave -position end  sim:/sine_approximation_vhd_tst/angle
+add wave -position end  sim:/sine_approximation_vhd_tst/clk
+add wave -position end  sim:/sine_approximation_vhd_tst/sine_out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: acorbi2  Hostname: 156TR4180-01  ProcessID: 18784
+#           Attempting to use alternate WLF file "./wlft4jyqab".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4jyqab
+run -all
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.sine_approximation_vhd_tst
+# End time: 11:36:39 on Apr 05,2024, Elapsed time: 0:01:45
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" work.sine_approximation_vhd_tst 
+# Start time: 11:36:39 on Apr 05,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_vhd_tst(sine_approximation_arch)#1
+# Loading work.sine_approximation(behavioral)#1
+add wave -position end  sim:/sine_approximation_vhd_tst/angle
+add wave -position end  sim:/sine_approximation_vhd_tst/clk
+add wave -position end  sim:/sine_approximation_vhd_tst/sine_out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: acorbi2  Hostname: 156TR4180-01  ProcessID: 18784
+#           Attempting to use alternate WLF file "./wlftv2zebe".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftv2zebe
+run
+restart
+env ..
+# sim:/sine_approximation_vhd_tst
+# Compile of sine_approximation.vhd was successful.
+# Compile of sine_approximation_pipelined.vhd was successful.
+# Compile of sine_approximation.vht was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.sine_approximation_vhd_tst
+# End time: 11:39:07 on Apr 05,2024, Elapsed time: 0:02:28
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" work.sine_approximation_vhd_tst 
+# Start time: 11:39:07 on Apr 05,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sine_approximation_vhd_tst(sine_approximation_arch)#1
+# Loading work.sine_approximation(behavioral)#1
+add wave -position end  sim:/sine_approximation_vhd_tst/angle
+add wave -position end  sim:/sine_approximation_vhd_tst/clk
+add wave -position end  sim:/sine_approximation_vhd_tst/sine_out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: acorbi2  Hostname: 156TR4180-01  ProcessID: 18784
+#           Attempting to use alternate WLF file "./wlftc9ybnt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftc9ybnt
+run
