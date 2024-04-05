@@ -55,14 +55,14 @@ begin
         end if;
     end process;
 
-    angle_change <= "0000000000000000"&angle_32;
+    angle_change <= angle_32;
     tmp1_1 <= unsigned(unsigned(C1)*unsigned(angle_change));
     result1 <= "0000000000000"&tmp1_1(31 downto 13);
     
     --angle_reg_1 <= angle_change;
     tmp1_2 <= unsigned(unsigned(z_reg_1)*unsigned(angle_reg_1));
     --tmp2 <= "000"&tmp1(31 downto 3);
-    result2 <= unsigned(unsigned(B1)-unsigned("0010"&tmp1_2(31 downto 3)));
+    result2 <= unsigned(unsigned(B1)-unsigned("010"&tmp1_2(31 downto 3)));
     
     --angle_reg_2 <= angle_reg_1;
     tmp1_3 <= unsigned(unsigned(angle_reg_2)*(unsigned("0000000000000"&z_reg_2(31 downto 13))));
@@ -81,7 +81,7 @@ begin
     tmp2_2 <= unsigned(unsigned(z_reg_6)+unsigned(tmp2_1(13 downto 0)&"000000000000000000"));
     result7 <= "0000000000000000000"&tmp2_2(31 downto 19);
     
-    result <= z_reg_7(15 downto 0);
+    result <= z_reg_7;
     -- Output assignment
     process(clk)
     begin
