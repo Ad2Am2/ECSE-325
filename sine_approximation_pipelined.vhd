@@ -21,42 +21,65 @@ architecture Behavioral of sine_approximation_pipelined is
     constant a : unsigned(31 downto 0) := "00000000000000000000000000001100"; -- 12
 
     constant one : unsigned(31 downto 0) := X"00000001";
+
+    signal z_reg_1,z_reg_2,z_reg_3,z_reg_4,z_reg_5,z_reg_6,z_reg_7   : std_logic_vector(31 downto 0);
+    signal result1, result2, result3, result4, result5, result6, result7 : std_logic_vector(31 downto 0);
+    signal angle_reg_1, angle_reg_2, angle_reg_3, angle_reg_4, angle_reg_5  : std_logic_vector(31 downto 0);
+    signal angle_change : std_logic_vector(31 downto 0);
     
     signal angle_32 : unsigned(31 downto 0);
     signal result : unsigned(31 downto 0);
-    signal result1, result2, result3, result4, result5, result6 : unsigned(31 downto 0);
-    signal piped_result1, piped_result2, piped_result3, piped_result4, piped_result5, piped_result6 : unsigned(31 downto 0);
 
 begin
     process(clk)
     begin
         if rising_edge(clk) then
             angle_32 <= resize(angle, 32); -- Resizing for 32-bit computation
+
+
+            z_reg_1 <= result1;
+            z_reg_2 <= result2;
+            z_reg_3 <= result3;
+            z_reg_4 <= result4;
+            z_reg_5 <= result5;
+            z_reg_6 <= result6;
+            z_reg_7 <= result7;
+            angle_reg_5 <= angle_reg_4;
+            angle_reg_4 <= angle_reg_3;
+            angle_reg_3 <= angle_reg_2;
+            angle_reg_2 <= angle_reg_1;
+            angle_reg_1 <= angle_change;
+
         end if;
     end process;
 
-    -- Pipeline registers inserted after each multiplication
-    result1 <= resize(unsigned(rotate_right((C1 * angle_32), 13)), 32);
-    piped_result1 <= result1;
-
-    result2 <= resize(B1 - unsigned(rotate_right((angle_32 * piped_result1), 3)), 32);
-    piped_result2 <= result2;
-
-    result3 <= resize(angle_32 * unsigned(rotate_right(piped_result2, 13)), 32);
-    piped_result3 <= result3;
-
-    result4 <= resize(angle_32 * unsigned(rotate_right(piped_result3, 13)), 32);
-    piped_result4 <= result4;
-
-    result5 <= resize(A1 - unsigned(rotate_left(piped_result4, 1)), 32);
-    piped_result5 <= result5;
-
-    result6 <= resize(angle_32 * unsigned(rotate_right(piped_result5, 13)), 32);
-    piped_result6 <= result6;
-
-    -- Final result calculation
-    result <= resize(unsigned(rotate_right((piped_result6 + unsigned(rotate_left(one, 18))), (19))), 32);
-
+    angle_change <= "0000000000000000"&i;
+    tmp1_1 <= std_logic_vector(unsigned(C1)*unsigned(angle_change));
+    result1 <= "0000000000000"&tmp1_1(31 downto 13);
+    
+    --angle_reg_1 <= angle_change;
+    tmp1_2 <= std_logic_vector(unsigned(z_reg_1)*unsigned(angle_reg_1));
+    --tmp2 <= "000"&tmp1(31 downto 3);
+    result2 <= std_logic_vector(unsigned(B1)-unsigned("00z0"&tmp1_2(31 downto 3)));
+    
+    --angle_reg_2 <= angle_reg_1;
+    tmp1_3 <= std_logic_vector(unsigned(angle_reg_2)*(unsigned("0000000000000"&z_reg_2(31 downto 13))));
+    result3 <= tmp1_3(31 downto 0);
+    
+    --angle_reg_3 <= angle_reg_2;
+    tmp1_4 <= std_logic_vector(unsigned(angle_reg_3)*(unsigned("0000000000000"&z_reg_3(31 downto 13))));
+    result4 <= tmp1_4(31 downto 0);
+    
+    result5 <= std_logic_vector(unsigned(A1)-unsigned("0"&z_reg_4(31 downto 1)));
+    
+    tmp1_6 <= std_logic_vector(unsigned(angle_reg_5)*unsigned("0000000000000"&z_reg_5(31 downto 13)));
+    result6 <= tmp1_6(31 downto 0);
+    
+    tmp2_1 <= std_logic_vector(to_unsigned(1,32));
+    tmp2_2 <= std_logic_vector(unsigned(z_reg_6)+unsigned(tmp2_1(13 downto 0)&"000000000000000000"));
+    result7 <= "0000000000000000000"&tmp2_2(31 downto 19);
+    
+    result <= z_reg_7(15 downto 0);
     -- Output assignment
     process(clk)
     begin
