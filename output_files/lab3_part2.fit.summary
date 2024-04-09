@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Apr  2 14:31:57 2024
+Fitter Status : Successful - Fri Apr  5 13:37:57 2024
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : lab3_part2
-Top-level Entity Name : sine_approximation_pipelined
+Top-level Entity Name : sine_approximation
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 66 / 32,070 ( < 1 % )
+Logic utilization (in ALMs) : 60 / 32,070 ( < 1 % )
 Total registers : 13
 Total pins : 27 / 457 ( 6 % )
 Total virtual pins : 0

@@ -1,4 +1,4 @@
-|sine_approximation_pipelined
+|sine_approximation
 clk => sine_out[0]~reg0.CLK
 clk => sine_out[1]~reg0.CLK
 clk => sine_out[2]~reg0.CLK

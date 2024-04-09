@@ -1,5 +1,5 @@
 Timing Analyzer report for lab3_part2
-Tue Apr  2 14:32:17 2024
+Fri Apr  5 13:38:18 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -9,52 +9,53 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   1. Legal Notice
   2. Timing Analyzer Summary
   3. Parallel Compilation
-  4. Clocks
-  5. Slow 1100mV 85C Model Fmax Summary
-  6. Timing Closure Recommendations
-  7. Slow 1100mV 85C Model Setup Summary
-  8. Slow 1100mV 85C Model Hold Summary
-  9. Slow 1100mV 85C Model Recovery Summary
- 10. Slow 1100mV 85C Model Removal Summary
- 11. Slow 1100mV 85C Model Minimum Pulse Width Summary
- 12. Slow 1100mV 85C Model Metastability Summary
- 13. Slow 1100mV 0C Model Fmax Summary
- 14. Slow 1100mV 0C Model Setup Summary
- 15. Slow 1100mV 0C Model Hold Summary
- 16. Slow 1100mV 0C Model Recovery Summary
- 17. Slow 1100mV 0C Model Removal Summary
- 18. Slow 1100mV 0C Model Minimum Pulse Width Summary
- 19. Slow 1100mV 0C Model Metastability Summary
- 20. Fast 1100mV 85C Model Setup Summary
- 21. Fast 1100mV 85C Model Hold Summary
- 22. Fast 1100mV 85C Model Recovery Summary
- 23. Fast 1100mV 85C Model Removal Summary
- 24. Fast 1100mV 85C Model Minimum Pulse Width Summary
- 25. Fast 1100mV 85C Model Metastability Summary
- 26. Fast 1100mV 0C Model Setup Summary
- 27. Fast 1100mV 0C Model Hold Summary
- 28. Fast 1100mV 0C Model Recovery Summary
- 29. Fast 1100mV 0C Model Removal Summary
- 30. Fast 1100mV 0C Model Minimum Pulse Width Summary
- 31. Fast 1100mV 0C Model Metastability Summary
- 32. Multicorner Timing Analysis Summary
- 33. Board Trace Model Assignments
- 34. Input Transition Times
- 35. Signal Integrity Metrics (Slow 1100mv 0c Model)
- 36. Signal Integrity Metrics (Slow 1100mv 85c Model)
- 37. Signal Integrity Metrics (Fast 1100mv 0c Model)
- 38. Signal Integrity Metrics (Fast 1100mv 85c Model)
- 39. Setup Transfers
- 40. Hold Transfers
- 41. Report TCCS
- 42. Report RSKM
- 43. Unconstrained Paths Summary
- 44. Clock Status Summary
- 45. Unconstrained Input Ports
- 46. Unconstrained Output Ports
- 47. Unconstrained Input Ports
- 48. Unconstrained Output Ports
- 49. Timing Analyzer Messages
+  4. SDC File List
+  5. Clocks
+  6. Slow 1100mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1100mV 85C Model Setup Summary
+  9. Slow 1100mV 85C Model Hold Summary
+ 10. Slow 1100mV 85C Model Recovery Summary
+ 11. Slow 1100mV 85C Model Removal Summary
+ 12. Slow 1100mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1100mV 85C Model Metastability Summary
+ 14. Slow 1100mV 0C Model Fmax Summary
+ 15. Slow 1100mV 0C Model Setup Summary
+ 16. Slow 1100mV 0C Model Hold Summary
+ 17. Slow 1100mV 0C Model Recovery Summary
+ 18. Slow 1100mV 0C Model Removal Summary
+ 19. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 20. Slow 1100mV 0C Model Metastability Summary
+ 21. Fast 1100mV 85C Model Setup Summary
+ 22. Fast 1100mV 85C Model Hold Summary
+ 23. Fast 1100mV 85C Model Recovery Summary
+ 24. Fast 1100mV 85C Model Removal Summary
+ 25. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 26. Fast 1100mV 85C Model Metastability Summary
+ 27. Fast 1100mV 0C Model Setup Summary
+ 28. Fast 1100mV 0C Model Hold Summary
+ 29. Fast 1100mV 0C Model Recovery Summary
+ 30. Fast 1100mV 0C Model Removal Summary
+ 31. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 32. Fast 1100mV 0C Model Metastability Summary
+ 33. Multicorner Timing Analysis Summary
+ 34. Board Trace Model Assignments
+ 35. Input Transition Times
+ 36. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 37. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 38. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 39. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 40. Setup Transfers
+ 41. Hold Transfers
+ 42. Report TCCS
+ 43. Report RSKM
+ 44. Unconstrained Paths Summary
+ 45. Clock Status Summary
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Unconstrained Input Ports
+ 49. Unconstrained Output Ports
+ 50. Timing Analyzer Messages
 
 
 
@@ -105,17 +106,27 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.3%      ;
-;     Processor 3            ;   2.2%      ;
-;     Processor 4            ;   2.1%      ;
-;     Processor 5            ;   1.6%      ;
+;     Processor 2            ;   2.0%      ;
+;     Processor 3            ;   1.9%      ;
+;     Processor 4            ;   1.8%      ;
+;     Processor 5            ;   1.5%      ;
 ;     Processor 6            ;   1.5%      ;
 ;     Processor 7            ;   1.5%      ;
 ;     Processor 8            ;   1.5%      ;
 ;     Processor 9            ;   1.5%      ;
 ;     Processor 10           ;   1.5%      ;
-;     Processors 11-16       ;   0.9%      ;
+;     Processor 11           ;   1.5%      ;
+;     Processors 12-16       ;   0.9%      ;
 +----------------------------+-------------+
+
+
++------------------------------------------------------------+
+; SDC File List                                              ;
++------------------------+--------+--------------------------+
+; SDC File Path          ; Status ; Read at                  ;
++------------------------+--------+--------------------------+
+; sine_approximation.sdc ; OK     ; Fri Apr  5 13:38:13 2024 ;
++------------------------+--------+--------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -123,7 +134,7 @@ https://fpgasoftware.intel.com/eula.
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 ; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
-; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
+; clk        ; Base ; 6.000  ; 166.67 MHz ; 0.000 ; 3.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
@@ -132,7 +143,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 29.94 MHz ; 29.94 MHz       ; clk        ;      ;
+; 29.68 MHz ; 29.68 MHz       ; clk        ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -148,7 +159,7 @@ HTML report is unavailable in plain text report export.
 +-------+---------+-------------------+
 ; Clock ; Slack   ; End Point TNS     ;
 +-------+---------+-------------------+
-; clk   ; -32.397 ; -417.873          ;
+; clk   ; -27.695 ; -350.556          ;
 +-------+---------+-------------------+
 
 
@@ -157,7 +168,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clk   ; 1.672 ; 0.000              ;
+; clk   ; 1.639 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -175,17 +186,18 @@ No paths to report.
 
 +---------------------------------------------------+
 ; Slow 1100mV 85C Model Minimum Pulse Width Summary ;
-+-------+--------+----------------------------------+
-; Clock ; Slack  ; End Point TNS                    ;
-+-------+--------+----------------------------------+
-; clk   ; -2.225 ; -296.044                         ;
-+-------+--------+----------------------------------+
++-------+-------+-----------------------------------+
+; Clock ; Slack ; End Point TNS                     ;
++-------+-------+-----------------------------------+
+; clk   ; 2.396 ; 0.000                             ;
++-------+-------+-----------------------------------+
 
 
 -----------------------------------------------
 ; Slow 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +-------------------------------------------------+
@@ -193,7 +205,7 @@ No synchronizer chains to report.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 29.24 MHz ; 29.24 MHz       ; clk        ;      ;
+; 29.09 MHz ; 29.09 MHz       ; clk        ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -203,7 +215,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+---------+------------------+
 ; Clock ; Slack   ; End Point TNS    ;
 +-------+---------+------------------+
-; clk   ; -33.199 ; -427.853         ;
+; clk   ; -28.374 ; -358.536         ;
 +-------+---------+------------------+
 
 
@@ -212,7 +224,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 1.773 ; 0.000             ;
+; clk   ; 1.719 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -230,17 +242,18 @@ No paths to report.
 
 +--------------------------------------------------+
 ; Slow 1100mV 0C Model Minimum Pulse Width Summary ;
-+-------+--------+---------------------------------+
-; Clock ; Slack  ; End Point TNS                   ;
-+-------+--------+---------------------------------+
-; clk   ; -2.225 ; -296.688                        ;
-+-------+--------+---------------------------------+
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; clk   ; 2.322 ; 0.000                            ;
++-------+-------+----------------------------------+
 
 
 ----------------------------------------------
 ; Slow 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +-------------------------------------+
@@ -248,7 +261,7 @@ No synchronizer chains to report.
 +-------+---------+-------------------+
 ; Clock ; Slack   ; End Point TNS     ;
 +-------+---------+-------------------+
-; clk   ; -17.407 ; -224.309          ;
+; clk   ; -12.555 ; -158.779          ;
 +-------+---------+-------------------+
 
 
@@ -257,7 +270,7 @@ No synchronizer chains to report.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clk   ; 0.904 ; 0.000              ;
+; clk   ; 0.916 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -275,17 +288,18 @@ No paths to report.
 
 +---------------------------------------------------+
 ; Fast 1100mV 85C Model Minimum Pulse Width Summary ;
-+-------+--------+----------------------------------+
-; Clock ; Slack  ; End Point TNS                    ;
-+-------+--------+----------------------------------+
-; clk   ; -1.702 ; -222.286                         ;
-+-------+--------+----------------------------------+
++-------+-------+-----------------------------------+
+; Clock ; Slack ; End Point TNS                     ;
++-------+-------+-----------------------------------+
+; clk   ; 2.420 ; 0.000                             ;
++-------+-------+-----------------------------------+
 
 
 -----------------------------------------------
 ; Fast 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +------------------------------------+
@@ -293,7 +307,7 @@ No synchronizer chains to report.
 +-------+---------+------------------+
 ; Clock ; Slack   ; End Point TNS    ;
 +-------+---------+------------------+
-; clk   ; -16.304 ; -210.110         ;
+; clk   ; -11.452 ; -144.389         ;
 +-------+---------+------------------+
 
 
@@ -302,7 +316,7 @@ No synchronizer chains to report.
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 0.902 ; 0.000             ;
+; clk   ; 0.903 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -320,17 +334,18 @@ No paths to report.
 
 +--------------------------------------------------+
 ; Fast 1100mV 0C Model Minimum Pulse Width Summary ;
-+-------+--------+---------------------------------+
-; Clock ; Slack  ; End Point TNS                   ;
-+-------+--------+---------------------------------+
-; clk   ; -1.702 ; -222.318                        ;
-+-------+--------+---------------------------------+
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; clk   ; 2.418 ; 0.000                            ;
++-------+-------+----------------------------------+
 
 
 ----------------------------------------------
 ; Fast 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +--------------------------------------------------------------------------------+
@@ -338,10 +353,10 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -33.199  ; 0.902 ; N/A      ; N/A     ; -2.225              ;
-;  clk             ; -33.199  ; 0.902 ; N/A      ; N/A     ; -2.225              ;
-; Design-wide TNS  ; -427.853 ; 0.0   ; 0.0      ; 0.0     ; -296.688            ;
-;  clk             ; -427.853 ; 0.000 ; N/A      ; N/A     ; -296.688            ;
+; Worst-case Slack ; -28.374  ; 0.903 ; N/A      ; N/A     ; 2.322               ;
+;  clk             ; -28.374  ; 0.903 ; N/A      ; N/A     ; 2.322               ;
+; Design-wide TNS  ; -358.536 ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk             ; -358.536 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -393,19 +408,19 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; sine_out[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; sine_out[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; sine_out[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
+; sine_out[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
+; sine_out[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; sine_out[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; sine_out[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; sine_out[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
-; sine_out[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; sine_out[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; sine_out[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; sine_out[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
-; sine_out[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; sine_out[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; sine_out[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; sine_out[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
-; sine_out[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; sine_out[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; sine_out[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; sine_out[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; sine_out[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; sine_out[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; sine_out[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -414,19 +429,19 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; sine_out[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; sine_out[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; sine_out[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
+; sine_out[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
+; sine_out[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; sine_out[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; sine_out[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; sine_out[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
-; sine_out[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; sine_out[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; sine_out[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; sine_out[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
-; sine_out[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; sine_out[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; sine_out[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; sine_out[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
-; sine_out[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; sine_out[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; sine_out[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; sine_out[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; sine_out[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; sine_out[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; sine_out[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -435,19 +450,19 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; sine_out[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; sine_out[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; sine_out[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
+; sine_out[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
+; sine_out[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; sine_out[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; sine_out[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; sine_out[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
-; sine_out[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; sine_out[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; sine_out[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; sine_out[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
-; sine_out[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; sine_out[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; sine_out[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; sine_out[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
-; sine_out[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; sine_out[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; sine_out[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; sine_out[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; sine_out[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; sine_out[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; sine_out[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -456,19 +471,19 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; sine_out[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; sine_out[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
-; sine_out[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; sine_out[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; sine_out[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; sine_out[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 ; sine_out[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; sine_out[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
-; sine_out[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; sine_out[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; sine_out[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; sine_out[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
-; sine_out[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
-; sine_out[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
-; sine_out[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
-; sine_out[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
-; sine_out[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; sine_out[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; sine_out[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; sine_out[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; sine_out[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; sine_out[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; sine_out[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -617,101 +632,840 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Apr  2 14:32:11 2024
+    Info: Processing started: Fri Apr  5 13:38:11 2024
 Info: Command: quartus_sta lab3_part2 -c lab3_part2
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'lab3_part2.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332104): Reading SDC File: 'sine_approximation.sdc'
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -32.397
+Info (332146): Worst-case setup slack is -27.695
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -32.397            -417.873 clk 
-Info (332146): Worst-case hold slack is 1.672
+    Info (332119):   -27.695            -350.556 clk 
+Info (332146): Worst-case hold slack is 1.639
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.672               0.000 clk 
+    Info (332119):     1.639               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.225
+Info (332146): Worst-case minimum pulse width slack is 2.396
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225            -296.044 clk 
+    Info (332119):     2.396               0.000 clk 
+Info (332114): Report Metastability: Found 130 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info (332115): Report Timing: Found 1 setup paths (1 violated).  Worst case slack is -27.695
+    Info (332115): -to_clock [get_clocks {clk}]
+    Info (332115): -setup
+    Info (332115): -stdout
+Info (332115): Path #1: Setup slack is -27.695 (VIOLATED)
+    Info (332115): ===================================================================
+    Info (332115): From Node    : angle_32[0]
+    Info (332115): To Node      : sine_out[12]~reg0
+    Info (332115): Launch Clock : clk
+    Info (332115): Latch Clock  : clk
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      4.365      4.365  R        clock network delay
+    Info (332115):      4.365      0.000     uTco  angle_32[0]
+    Info (332115):      7.149      2.784 RF  CELL  Mult0~8|resulta[18]
+    Info (332115):      8.084      0.935 FF    IC  Mult0~337|datab
+    Info (332115):      8.900      0.816 FF  CELL  Mult0~337|cout
+    Info (332115):      8.900      0.000 FF    IC  Mult0~341|cin
+    Info (332115):      8.900      0.000 FF  CELL  Mult0~341|cout
+    Info (332115):      8.900      0.000 FF    IC  Mult0~345|cin
+    Info (332115):      8.942      0.042 FF  CELL  Mult0~345|cout
+    Info (332115):      8.942      0.000 FF    IC  Mult0~349|cin
+    Info (332115):      8.942      0.000 FF  CELL  Mult0~349|cout
+    Info (332115):      8.942      0.000 FF    IC  Mult0~353|cin
+    Info (332115):      8.984      0.042 FF  CELL  Mult0~353|cout
+    Info (332115):      8.984      0.000 FF    IC  Mult0~357|cin
+    Info (332115):      8.984      0.000 FF  CELL  Mult0~357|cout
+    Info (332115):      8.984      0.000 FF    IC  Mult0~361|cin
+    Info (332115):      9.026      0.042 FF  CELL  Mult0~361|cout
+    Info (332115):      9.026      0.000 FF    IC  Mult0~365|cin
+    Info (332115):      9.026      0.000 FF  CELL  Mult0~365|cout
+    Info (332115):      9.026      0.000 FF    IC  Mult0~369|cin
+    Info (332115):      9.065      0.039 FF  CELL  Mult0~369|cout
+    Info (332115):      9.065      0.000 FF    IC  Mult0~373|cin
+    Info (332115):      9.065      0.000 FF  CELL  Mult0~373|cout
+    Info (332115):      9.065      0.000 FF    IC  Mult0~377|cin
+    Info (332115):      9.174      0.109 FF  CELL  Mult0~377|cout
+    Info (332115):      9.174      0.000 FF    IC  Mult0~381|cin
+    Info (332115):      9.174      0.000 FF  CELL  Mult0~381|cout
+    Info (332115):      9.174      0.000 FF    IC  Mult0~385|cin
+    Info (332115):      9.479      0.305 FF  CELL  Mult0~385|sumout
+    Info (332115):     10.699      1.220 FF    IC  Mult1~8|ay[17]
+    Info (332115):     13.858      3.159 FF  CELL  Mult1~8|resulta[5]
+    Info (332115):     14.756      0.898 FF    IC  Add0~85|datad
+    Info (332115):     15.419      0.663 FR  CELL  Add0~85|cout
+    Info (332115):     15.419      0.000 RR    IC  Add0~89|cin
+    Info (332115):     15.419      0.000 RR  CELL  Add0~89|cout
+    Info (332115):     15.419      0.000 RR    IC  Add0~93|cin
+    Info (332115):     15.464      0.045 RR  CELL  Add0~93|cout
+    Info (332115):     15.464      0.000 RR    IC  Add0~97|cin
+    Info (332115):     15.464      0.000 RR  CELL  Add0~97|cout
+    Info (332115):     15.464      0.000 RR    IC  Add0~101|cin
+    Info (332115):     15.509      0.045 RR  CELL  Add0~101|cout
+    Info (332115):     15.509      0.000 RR    IC  Add0~105|cin
+    Info (332115):     15.509      0.000 RR  CELL  Add0~105|cout
+    Info (332115):     15.509      0.000 RR    IC  Add0~109|cin
+    Info (332115):     15.566      0.057 RR  CELL  Add0~109|cout
+    Info (332115):     15.566      0.000 RR    IC  Add0~113|cin
+    Info (332115):     15.566      0.000 RR  CELL  Add0~113|cout
+    Info (332115):     15.566      0.000 RR    IC  Add0~117|cin
+    Info (332115):     15.656      0.090 RR  CELL  Add0~117|cout
+    Info (332115):     15.656      0.000 RR    IC  Add0~121|cin
+    Info (332115):     15.656      0.000 RR  CELL  Add0~121|cout
+    Info (332115):     15.656      0.000 RR    IC  Add0~73|cin
+    Info (332115):     15.701      0.045 RR  CELL  Add0~73|cout
+    Info (332115):     15.701      0.000 RR    IC  Add0~1|cin
+    Info (332115):     15.701      0.000 RR  CELL  Add0~1|cout
+    Info (332115):     15.701      0.000 RR    IC  Add0~5|cin
+    Info (332115):     15.746      0.045 RR  CELL  Add0~5|cout
+    Info (332115):     15.746      0.000 RR    IC  Add0~9|cin
+    Info (332115):     15.746      0.000 RR  CELL  Add0~9|cout
+    Info (332115):     15.746      0.000 RR    IC  Add0~13|cin
+    Info (332115):     15.791      0.045 RR  CELL  Add0~13|cout
+    Info (332115):     15.791      0.000 RR    IC  Add0~17|cin
+    Info (332115):     15.791      0.000 RR  CELL  Add0~17|cout
+    Info (332115):     15.791      0.000 RR    IC  Add0~21|cin
+    Info (332115):     15.833      0.042 RR  CELL  Add0~21|cout
+    Info (332115):     15.833      0.000 RR    IC  Add0~25|cin
+    Info (332115):     15.833      0.000 RR  CELL  Add0~25|cout
+    Info (332115):     15.833      0.000 RR    IC  Add0~29|cin
+    Info (332115):     16.276      0.443 RF  CELL  Add0~29|sumout
+    Info (332115):     17.524      1.248 FF    IC  Mult2~mult_llmac|ay[7]
+    Info (332115):     20.683      3.159 FF  CELL  Mult2~mult_llmac|resulta[23]
+    Info (332115):     22.098      1.415 FF    IC  Mult2~344|datac
+    Info (332115):     22.827      0.729 FF  CELL  Mult2~344|cout
+    Info (332115):     22.827      0.000 FF    IC  Mult2~348|cin
+    Info (332115):     22.869      0.042 FF  CELL  Mult2~348|cout
+    Info (332115):     22.869      0.000 FF    IC  Mult2~352|cin
+    Info (332115):     22.869      0.000 FF  CELL  Mult2~352|cout
+    Info (332115):     22.869      0.000 FF    IC  Mult2~356|cin
+    Info (332115):     22.920      0.051 FF  CELL  Mult2~356|cout
+    Info (332115):     22.920      0.000 FF    IC  Mult2~360|cin
+    Info (332115):     23.073      0.153 FF  CELL  Mult2~360|sumout
+    Info (332115):     24.025      0.952 FF    IC  Mult3~mult_llmac|ay[14]
+    Info (332115):     27.184      3.159 FF  CELL  Mult3~mult_llmac|resulta[19]
+    Info (332115):     28.159      0.975 FF    IC  Mult3~328|datac
+    Info (332115):     28.888      0.729 FF  CELL  Mult3~328|cout
+    Info (332115):     28.888      0.000 FF    IC  Mult3~332|cin
+    Info (332115):     28.930      0.042 FF  CELL  Mult3~332|cout
+    Info (332115):     28.930      0.000 FF    IC  Mult3~336|cin
+    Info (332115):     28.930      0.000 FF  CELL  Mult3~336|cout
+    Info (332115):     28.930      0.000 FF    IC  Mult3~340|cin
+    Info (332115):     28.972      0.042 FF  CELL  Mult3~340|cout
+    Info (332115):     28.972      0.000 FF    IC  Mult3~344|cin
+    Info (332115):     28.972      0.000 FF  CELL  Mult3~344|cout
+    Info (332115):     28.972      0.000 FF    IC  Mult3~348|cin
+    Info (332115):     29.014      0.042 FF  CELL  Mult3~348|cout
+    Info (332115):     29.014      0.000 FF    IC  Mult3~352|cin
+    Info (332115):     29.014      0.000 FF  CELL  Mult3~352|cout
+    Info (332115):     29.014      0.000 FF    IC  Mult3~356|cin
+    Info (332115):     29.323      0.309 FF  CELL  Mult3~356|sumout
+    Info (332115):     30.099      0.776 FF    IC  Add1~57|datac
+    Info (332115):     30.844      0.745 FR  CELL  Add1~57|cout
+    Info (332115):     30.844      0.000 RR    IC  Add1~61|cin
+    Info (332115):     30.889      0.045 RR  CELL  Add1~61|cout
+    Info (332115):     30.889      0.000 RR    IC  Add1~65|cin
+    Info (332115):     30.889      0.000 RR  CELL  Add1~65|cout
+    Info (332115):     30.889      0.000 RR    IC  Add1~69|cin
+    Info (332115):     31.192      0.303 RF  CELL  Add1~69|sumout
+    Info (332115):     31.985      0.793 FF    IC  Mult4~8|ay[17]
+    Info (332115):     35.144      3.159 FF  CELL  Mult4~8|resulta[18]
+    Info (332115):     35.856      0.712 FF    IC  Mult4~335|dataa
+    Info (332115):     36.938      1.082 FR  CELL  Mult4~335|sumout
+    Info (332115):     36.938      0.000 RR    IC  sine_out[12]~reg0|d
+    Info (332115):     37.157      0.219 RR  CELL  sine_out[12]~reg0
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      6.000      6.000           latch edge time
+    Info (332115):      9.576      3.576  R        clock network delay
+    Info (332115):      9.632      0.056           clock pessimism removed
+    Info (332115):      9.462     -0.170           clock uncertainty
+    Info (332115):      9.462      0.000     uTsu  sine_out[12]~reg0
+    Info (332115): 
+    Info (332115): Data Arrival Time  :    37.157
+    Info (332115): Data Required Time :     9.462
+    Info (332115): Slack              :   -27.695 (VIOLATED)
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 1.639
+    Info (332115): -to_clock [get_clocks {clk}]
+    Info (332115): -hold
+    Info (332115): -stdout
+Info (332115): Path #1: Hold slack is 1.639 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : angle_32[0]~_Duplicate_9
+    Info (332115): To Node      : sine_out[8]~reg0
+    Info (332115): Launch Clock : clk
+    Info (332115): Latch Clock  : clk
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      3.823      3.823  R        clock network delay
+    Info (332115):      3.823      0.000     uTco  angle_32[0]~_Duplicate_9
+    Info (332115):      4.639      0.816 RR  CELL  Mult4~8|resulta[15]
+    Info (332115):      5.175      0.536 RR    IC  sine_out[8]~reg0feeder|dataf
+    Info (332115):      5.224      0.049 RR  CELL  sine_out[8]~reg0feeder|combout
+    Info (332115):      5.224      0.000 RR    IC  sine_out[8]~reg0|d
+    Info (332115):      5.279      0.055 RR  CELL  sine_out[8]~reg0
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           latch edge time
+    Info (332115):      4.056      4.056  R        clock network delay
+    Info (332115):      3.640     -0.416           clock pessimism removed
+    Info (332115):      3.640      0.000           clock uncertainty
+    Info (332115):      3.640      0.000      uTh  sine_out[8]~reg0
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     5.279
+    Info (332115): Data Required Time :     3.640
+    Info (332115): Slack              :     1.639 
+    Info (332115): ===================================================================
+    Info (332115): 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -33.199
+Info (332146): Worst-case setup slack is -28.374
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -33.199            -427.853 clk 
-Info (332146): Worst-case hold slack is 1.773
+    Info (332119):   -28.374            -358.536 clk 
+Info (332146): Worst-case hold slack is 1.719
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.773               0.000 clk 
+    Info (332119):     1.719               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.225
+Info (332146): Worst-case minimum pulse width slack is 2.322
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225            -296.688 clk 
+    Info (332119):     2.322               0.000 clk 
+Info (332114): Report Metastability: Found 130 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info (332115): Report Timing: Found 1 setup paths (1 violated).  Worst case slack is -28.374
+    Info (332115): -to_clock [get_clocks {clk}]
+    Info (332115): -setup
+    Info (332115): -stdout
+Info (332115): Path #1: Setup slack is -28.374 (VIOLATED)
+    Info (332115): ===================================================================
+    Info (332115): From Node    : angle_32[0]
+    Info (332115): To Node      : sine_out[12]~reg0
+    Info (332115): Launch Clock : clk
+    Info (332115): Latch Clock  : clk
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      4.465      4.465  R        clock network delay
+    Info (332115):      4.465      0.000     uTco  angle_32[0]
+    Info (332115):      7.340      2.875 RF  CELL  Mult0~8|resulta[18]
+    Info (332115):      8.248      0.908 FF    IC  Mult0~337|datab
+    Info (332115):      9.138      0.890 FF  CELL  Mult0~337|cout
+    Info (332115):      9.138      0.000 FF    IC  Mult0~341|cin
+    Info (332115):      9.138      0.000 FF  CELL  Mult0~341|cout
+    Info (332115):      9.138      0.000 FF    IC  Mult0~345|cin
+    Info (332115):      9.184      0.046 FF  CELL  Mult0~345|cout
+    Info (332115):      9.184      0.000 FF    IC  Mult0~349|cin
+    Info (332115):      9.184      0.000 FF  CELL  Mult0~349|cout
+    Info (332115):      9.184      0.000 FF    IC  Mult0~353|cin
+    Info (332115):      9.230      0.046 FF  CELL  Mult0~353|cout
+    Info (332115):      9.230      0.000 FF    IC  Mult0~357|cin
+    Info (332115):      9.230      0.000 FF  CELL  Mult0~357|cout
+    Info (332115):      9.230      0.000 FF    IC  Mult0~361|cin
+    Info (332115):      9.276      0.046 FF  CELL  Mult0~361|cout
+    Info (332115):      9.276      0.000 FF    IC  Mult0~365|cin
+    Info (332115):      9.276      0.000 FF  CELL  Mult0~365|cout
+    Info (332115):      9.276      0.000 FF    IC  Mult0~369|cin
+    Info (332115):      9.320      0.044 FF  CELL  Mult0~369|cout
+    Info (332115):      9.320      0.000 FF    IC  Mult0~373|cin
+    Info (332115):      9.320      0.000 FF  CELL  Mult0~373|cout
+    Info (332115):      9.320      0.000 FF    IC  Mult0~377|cin
+    Info (332115):      9.425      0.105 FF  CELL  Mult0~377|cout
+    Info (332115):      9.425      0.000 FF    IC  Mult0~381|cin
+    Info (332115):      9.425      0.000 FF  CELL  Mult0~381|cout
+    Info (332115):      9.425      0.000 FF    IC  Mult0~385|cin
+    Info (332115):      9.766      0.341 FF  CELL  Mult0~385|sumout
+    Info (332115):     10.902      1.136 FF    IC  Mult1~8|ay[17]
+    Info (332115):     14.164      3.262 FF  CELL  Mult1~8|resulta[5]
+    Info (332115):     15.034      0.870 FF    IC  Add0~85|datad
+    Info (332115):     15.719      0.685 FR  CELL  Add0~85|cout
+    Info (332115):     15.719      0.000 RR    IC  Add0~89|cin
+    Info (332115):     15.719      0.000 RR  CELL  Add0~89|cout
+    Info (332115):     15.719      0.000 RR    IC  Add0~93|cin
+    Info (332115):     15.766      0.047 RR  CELL  Add0~93|cout
+    Info (332115):     15.766      0.000 RR    IC  Add0~97|cin
+    Info (332115):     15.766      0.000 RR  CELL  Add0~97|cout
+    Info (332115):     15.766      0.000 RR    IC  Add0~101|cin
+    Info (332115):     15.813      0.047 RR  CELL  Add0~101|cout
+    Info (332115):     15.813      0.000 RR    IC  Add0~105|cin
+    Info (332115):     15.813      0.000 RR  CELL  Add0~105|cout
+    Info (332115):     15.813      0.000 RR    IC  Add0~109|cin
+    Info (332115):     15.873      0.060 RR  CELL  Add0~109|cout
+    Info (332115):     15.873      0.000 RR    IC  Add0~113|cin
+    Info (332115):     15.873      0.000 RR  CELL  Add0~113|cout
+    Info (332115):     15.873      0.000 RR    IC  Add0~117|cin
+    Info (332115):     15.966      0.093 RR  CELL  Add0~117|cout
+    Info (332115):     15.966      0.000 RR    IC  Add0~121|cin
+    Info (332115):     15.966      0.000 RR  CELL  Add0~121|cout
+    Info (332115):     15.966      0.000 RR    IC  Add0~73|cin
+    Info (332115):     16.013      0.047 RR  CELL  Add0~73|cout
+    Info (332115):     16.013      0.000 RR    IC  Add0~1|cin
+    Info (332115):     16.013      0.000 RR  CELL  Add0~1|cout
+    Info (332115):     16.013      0.000 RR    IC  Add0~5|cin
+    Info (332115):     16.060      0.047 RR  CELL  Add0~5|cout
+    Info (332115):     16.060      0.000 RR    IC  Add0~9|cin
+    Info (332115):     16.060      0.000 RR  CELL  Add0~9|cout
+    Info (332115):     16.060      0.000 RR    IC  Add0~13|cin
+    Info (332115):     16.107      0.047 RR  CELL  Add0~13|cout
+    Info (332115):     16.107      0.000 RR    IC  Add0~17|cin
+    Info (332115):     16.107      0.000 RR  CELL  Add0~17|cout
+    Info (332115):     16.107      0.000 RR    IC  Add0~21|cin
+    Info (332115):     16.151      0.044 RR  CELL  Add0~21|cout
+    Info (332115):     16.151      0.000 RR    IC  Add0~25|cin
+    Info (332115):     16.151      0.000 RR  CELL  Add0~25|cout
+    Info (332115):     16.151      0.000 RR    IC  Add0~29|cin
+    Info (332115):     16.638      0.487 RF  CELL  Add0~29|sumout
+    Info (332115):     17.814      1.176 FF    IC  Mult2~mult_llmac|ay[7]
+    Info (332115):     21.076      3.262 FF  CELL  Mult2~mult_llmac|resulta[23]
+    Info (332115):     22.431      1.355 FF    IC  Mult2~344|datac
+    Info (332115):     23.213      0.782 FF  CELL  Mult2~344|cout
+    Info (332115):     23.213      0.000 FF    IC  Mult2~348|cin
+    Info (332115):     23.259      0.046 FF  CELL  Mult2~348|cout
+    Info (332115):     23.259      0.000 FF    IC  Mult2~352|cin
+    Info (332115):     23.259      0.000 FF  CELL  Mult2~352|cout
+    Info (332115):     23.259      0.000 FF    IC  Mult2~356|cin
+    Info (332115):     23.315      0.056 FF  CELL  Mult2~356|cout
+    Info (332115):     23.315      0.000 FF    IC  Mult2~360|cin
+    Info (332115):     23.315      0.000 FF  CELL  Mult2~360|cout
+    Info (332115):     23.315      0.000 FF    IC  Mult2~364|cin
+    Info (332115):     23.421      0.106 FF  CELL  Mult2~364|cout
+    Info (332115):     23.421      0.000 FF    IC  Mult2~368|cin
+    Info (332115):     23.421      0.000 FF  CELL  Mult2~368|cout
+    Info (332115):     23.421      0.000 FF    IC  Mult2~372|cin
+    Info (332115):     23.760      0.339 FF  CELL  Mult2~372|sumout
+    Info (332115):     24.381      0.621 FF    IC  Mult3~mult_llmac|ay[17]
+    Info (332115):     27.643      3.262 FF  CELL  Mult3~mult_llmac|resulta[19]
+    Info (332115):     28.603      0.960 FF    IC  Mult3~328|datac
+    Info (332115):     29.385      0.782 FF  CELL  Mult3~328|cout
+    Info (332115):     29.385      0.000 FF    IC  Mult3~332|cin
+    Info (332115):     29.431      0.046 FF  CELL  Mult3~332|cout
+    Info (332115):     29.431      0.000 FF    IC  Mult3~336|cin
+    Info (332115):     29.431      0.000 FF  CELL  Mult3~336|cout
+    Info (332115):     29.431      0.000 FF    IC  Mult3~340|cin
+    Info (332115):     29.477      0.046 FF  CELL  Mult3~340|cout
+    Info (332115):     29.477      0.000 FF    IC  Mult3~344|cin
+    Info (332115):     29.477      0.000 FF  CELL  Mult3~344|cout
+    Info (332115):     29.477      0.000 FF    IC  Mult3~348|cin
+    Info (332115):     29.523      0.046 FF  CELL  Mult3~348|cout
+    Info (332115):     29.523      0.000 FF    IC  Mult3~352|cin
+    Info (332115):     29.523      0.000 FF  CELL  Mult3~352|cout
+    Info (332115):     29.523      0.000 FF    IC  Mult3~356|cin
+    Info (332115):     29.867      0.344 FF  CELL  Mult3~356|sumout
+    Info (332115):     30.592      0.725 FF    IC  Add1~57|datac
+    Info (332115):     31.404      0.812 FR  CELL  Add1~57|cout
+    Info (332115):     31.404      0.000 RR    IC  Add1~61|cin
+    Info (332115):     31.451      0.047 RR  CELL  Add1~61|cout
+    Info (332115):     31.451      0.000 RR    IC  Add1~65|cin
+    Info (332115):     31.451      0.000 RR  CELL  Add1~65|cout
+    Info (332115):     31.451      0.000 RR    IC  Add1~69|cin
+    Info (332115):     31.789      0.338 RF  CELL  Add1~69|sumout
+    Info (332115):     32.513      0.724 FF    IC  Mult4~8|ay[17]
+    Info (332115):     35.775      3.262 FF  CELL  Mult4~8|resulta[18]
+    Info (332115):     36.456      0.681 FF    IC  Mult4~335|dataa
+    Info (332115):     37.633      1.177 FR  CELL  Mult4~335|sumout
+    Info (332115):     37.633      0.000 RR    IC  sine_out[12]~reg0|d
+    Info (332115):     37.856      0.223 RR  CELL  sine_out[12]~reg0
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      6.000      6.000           latch edge time
+    Info (332115):      9.605      3.605  R        clock network delay
+    Info (332115):      9.652      0.047           clock pessimism removed
+    Info (332115):      9.482     -0.170           clock uncertainty
+    Info (332115):      9.482      0.000     uTsu  sine_out[12]~reg0
+    Info (332115): 
+    Info (332115): Data Arrival Time  :    37.856
+    Info (332115): Data Required Time :     9.482
+    Info (332115): Slack              :   -28.374 (VIOLATED)
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 1.719
+    Info (332115): -to_clock [get_clocks {clk}]
+    Info (332115): -hold
+    Info (332115): -stdout
+Info (332115): Path #1: Hold slack is 1.719 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : angle_32[0]~_Duplicate_9
+    Info (332115): To Node      : sine_out[8]~reg0
+    Info (332115): Launch Clock : clk
+    Info (332115): Latch Clock  : clk
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      3.924      3.924  R        clock network delay
+    Info (332115):      3.924      0.000     uTco  angle_32[0]~_Duplicate_9
+    Info (332115):      4.776      0.852 RR  CELL  Mult4~8|resulta[15]
+    Info (332115):      5.275      0.499 RR    IC  sine_out[8]~reg0feeder|dataf
+    Info (332115):      5.329      0.054 RR  CELL  sine_out[8]~reg0feeder|combout
+    Info (332115):      5.329      0.000 RR    IC  sine_out[8]~reg0|d
+    Info (332115):      5.386      0.057 RR  CELL  sine_out[8]~reg0
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           latch edge time
+    Info (332115):      4.077      4.077  R        clock network delay
+    Info (332115):      3.667     -0.410           clock pessimism removed
+    Info (332115):      3.667      0.000           clock uncertainty
+    Info (332115):      3.667      0.000      uTh  sine_out[8]~reg0
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     5.386
+    Info (332115): Data Required Time :     3.667
+    Info (332115): Slack              :     1.719 
+    Info (332115): ===================================================================
+    Info (332115): 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -17.407
+Info (332146): Worst-case setup slack is -12.555
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -17.407            -224.309 clk 
-Info (332146): Worst-case hold slack is 0.904
+    Info (332119):   -12.555            -158.779 clk 
+Info (332146): Worst-case hold slack is 0.916
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.904               0.000 clk 
+    Info (332119):     0.916               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -1.702
+Info (332146): Worst-case minimum pulse width slack is 2.420
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.702            -222.286 clk 
+    Info (332119):     2.420               0.000 clk 
+Info (332114): Report Metastability: Found 130 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info (332115): Report Timing: Found 1 setup paths (1 violated).  Worst case slack is -12.555
+    Info (332115): -to_clock [get_clocks {clk}]
+    Info (332115): -setup
+    Info (332115): -stdout
+Info (332115): Path #1: Setup slack is -12.555 (VIOLATED)
+    Info (332115): ===================================================================
+    Info (332115): From Node    : angle_32[0]
+    Info (332115): To Node      : sine_out[12]~reg0
+    Info (332115): Launch Clock : clk
+    Info (332115): Latch Clock  : clk
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      2.430      2.430  R        clock network delay
+    Info (332115):      2.430      0.000     uTco  angle_32[0]
+    Info (332115):      3.765      1.335 RF  CELL  Mult0~8|resulta[18]
+    Info (332115):      4.397      0.632 FF    IC  Mult0~337|datab
+    Info (332115):      4.753      0.356 FF  CELL  Mult0~337|cout
+    Info (332115):      4.753      0.000 FF    IC  Mult0~341|cin
+    Info (332115):      4.753      0.000 FF  CELL  Mult0~341|cout
+    Info (332115):      4.753      0.000 FF    IC  Mult0~345|cin
+    Info (332115):      4.775      0.022 FF  CELL  Mult0~345|cout
+    Info (332115):      4.775      0.000 FF    IC  Mult0~349|cin
+    Info (332115):      4.775      0.000 FF  CELL  Mult0~349|cout
+    Info (332115):      4.775      0.000 FF    IC  Mult0~353|cin
+    Info (332115):      4.797      0.022 FF  CELL  Mult0~353|cout
+    Info (332115):      4.797      0.000 FF    IC  Mult0~357|cin
+    Info (332115):      4.797      0.000 FF  CELL  Mult0~357|cout
+    Info (332115):      4.797      0.000 FF    IC  Mult0~361|cin
+    Info (332115):      4.819      0.022 FF  CELL  Mult0~361|cout
+    Info (332115):      4.819      0.000 FF    IC  Mult0~365|cin
+    Info (332115):      4.819      0.000 FF  CELL  Mult0~365|cout
+    Info (332115):      4.819      0.000 FF    IC  Mult0~369|cin
+    Info (332115):      4.839      0.020 FF  CELL  Mult0~369|cout
+    Info (332115):      4.839      0.000 FF    IC  Mult0~373|cin
+    Info (332115):      4.839      0.000 FF  CELL  Mult0~373|cout
+    Info (332115):      4.839      0.000 FF    IC  Mult0~377|cin
+    Info (332115):      4.900      0.061 FF  CELL  Mult0~377|cout
+    Info (332115):      4.900      0.000 FF    IC  Mult0~381|cin
+    Info (332115):      4.900      0.000 FF  CELL  Mult0~381|cout
+    Info (332115):      4.900      0.000 FF    IC  Mult0~385|cin
+    Info (332115):      5.034      0.134 FF  CELL  Mult0~385|sumout
+    Info (332115):      5.813      0.779 FF    IC  Mult1~8|ay[17]
+    Info (332115):      7.364      1.551 FF  CELL  Mult1~8|resulta[13]
+    Info (332115):      8.140      0.776 FF    IC  Add0~117|datad
+    Info (332115):      8.237      0.097 FR  CELL  Add0~117|shareout
+    Info (332115):      8.237      0.000 RR    IC  Add0~121|sharein
+    Info (332115):      8.426      0.189 RR  CELL  Add0~121|cout
+    Info (332115):      8.426      0.000 RR    IC  Add0~73|cin
+    Info (332115):      8.452      0.026 RR  CELL  Add0~73|cout
+    Info (332115):      8.452      0.000 RR    IC  Add0~1|cin
+    Info (332115):      8.452      0.000 RR  CELL  Add0~1|cout
+    Info (332115):      8.452      0.000 RR    IC  Add0~5|cin
+    Info (332115):      8.478      0.026 RR  CELL  Add0~5|cout
+    Info (332115):      8.478      0.000 RR    IC  Add0~9|cin
+    Info (332115):      8.478      0.000 RR  CELL  Add0~9|cout
+    Info (332115):      8.478      0.000 RR    IC  Add0~13|cin
+    Info (332115):      8.504      0.026 RR  CELL  Add0~13|cout
+    Info (332115):      8.504      0.000 RR    IC  Add0~17|cin
+    Info (332115):      8.504      0.000 RR  CELL  Add0~17|cout
+    Info (332115):      8.504      0.000 RR    IC  Add0~21|cin
+    Info (332115):      8.528      0.024 RR  CELL  Add0~21|cout
+    Info (332115):      8.528      0.000 RR    IC  Add0~25|cin
+    Info (332115):      8.528      0.000 RR  CELL  Add0~25|cout
+    Info (332115):      8.528      0.000 RR    IC  Add0~29|cin
+    Info (332115):      8.736      0.208 RF  CELL  Add0~29|sumout
+    Info (332115):      9.617      0.881 FF    IC  Mult2~mult_llmac|ay[7]
+    Info (332115):     11.168      1.551 FF  CELL  Mult2~mult_llmac|resulta[23]
+    Info (332115):     12.180      1.012 FF    IC  Mult2~344|datac
+    Info (332115):     12.510      0.330 FF  CELL  Mult2~344|cout
+    Info (332115):     12.510      0.000 FF    IC  Mult2~348|cin
+    Info (332115):     12.533      0.023 FF  CELL  Mult2~348|cout
+    Info (332115):     12.533      0.000 FF    IC  Mult2~352|cin
+    Info (332115):     12.533      0.000 FF  CELL  Mult2~352|cout
+    Info (332115):     12.533      0.000 FF    IC  Mult2~356|cin
+    Info (332115):     12.561      0.028 FF  CELL  Mult2~356|cout
+    Info (332115):     12.561      0.000 FF    IC  Mult2~360|cin
+    Info (332115):     12.561      0.000 FF  CELL  Mult2~360|cout
+    Info (332115):     12.561      0.000 FF    IC  Mult2~364|cin
+    Info (332115):     12.610      0.049 FF  CELL  Mult2~364|cout
+    Info (332115):     12.610      0.000 FF    IC  Mult2~368|cin
+    Info (332115):     12.610      0.000 FF  CELL  Mult2~368|cout
+    Info (332115):     12.610      0.000 FF    IC  Mult2~372|cin
+    Info (332115):     12.633      0.023 FF  CELL  Mult2~372|cout
+    Info (332115):     12.633      0.000 FF    IC  Mult2~717|cin
+    Info (332115):     12.776      0.143 FF  CELL  Mult2~717|sumout
+    Info (332115):     13.357      0.581 FF    IC  Mult3~383|ax[0]
+    Info (332115):     14.832      1.475 FF  CELL  Mult3~383|resulta[4]
+    Info (332115):     15.644      0.812 FF    IC  Mult3~340|datac
+    Info (332115):     15.951      0.307 FF  CELL  Mult3~340|cout
+    Info (332115):     15.951      0.000 FF    IC  Mult3~344|cin
+    Info (332115):     15.951      0.000 FF  CELL  Mult3~344|cout
+    Info (332115):     15.951      0.000 FF    IC  Mult3~348|cin
+    Info (332115):     15.974      0.023 FF  CELL  Mult3~348|cout
+    Info (332115):     15.974      0.000 FF    IC  Mult3~352|cin
+    Info (332115):     15.974      0.000 FF  CELL  Mult3~352|cout
+    Info (332115):     15.974      0.000 FF    IC  Mult3~356|cin
+    Info (332115):     16.112      0.138 FF  CELL  Mult3~356|sumout
+    Info (332115):     16.630      0.518 FF    IC  Add1~57|datac
+    Info (332115):     16.965      0.335 FR  CELL  Add1~57|cout
+    Info (332115):     16.965      0.000 RR    IC  Add1~61|cin
+    Info (332115):     16.991      0.026 RR  CELL  Add1~61|cout
+    Info (332115):     16.991      0.000 RR    IC  Add1~65|cin
+    Info (332115):     16.991      0.000 RR  CELL  Add1~65|cout
+    Info (332115):     16.991      0.000 RR    IC  Add1~69|cin
+    Info (332115):     17.124      0.133 RF  CELL  Add1~69|sumout
+    Info (332115):     17.670      0.546 FF    IC  Mult4~8|ay[17]
+    Info (332115):     19.221      1.551 FF  CELL  Mult4~8|resulta[18]
+    Info (332115):     19.718      0.497 FF    IC  Mult4~331|dataa
+    Info (332115):     20.104      0.386 FR  CELL  Mult4~331|cout
+    Info (332115):     20.104      0.000 RR    IC  Mult4~335|cin
+    Info (332115):     20.247      0.143 RR  CELL  Mult4~335|sumout
+    Info (332115):     20.247      0.000 RR    IC  sine_out[12]~reg0|d
+    Info (332115):     20.376      0.129 RR  CELL  sine_out[12]~reg0
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      6.000      6.000           latch edge time
+    Info (332115):      7.973      1.973  R        clock network delay
+    Info (332115):      7.991      0.018           clock pessimism removed
+    Info (332115):      7.821     -0.170           clock uncertainty
+    Info (332115):      7.821      0.000     uTsu  sine_out[12]~reg0
+    Info (332115): 
+    Info (332115): Data Arrival Time  :    20.376
+    Info (332115): Data Required Time :     7.821
+    Info (332115): Slack              :   -12.555 (VIOLATED)
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.916
+    Info (332115): -to_clock [get_clocks {clk}]
+    Info (332115): -hold
+    Info (332115): -stdout
+Info (332115): Path #1: Hold slack is 0.916 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : angle_32[0]~_Duplicate_9
+    Info (332115): To Node      : sine_out[8]~reg0
+    Info (332115): Launch Clock : clk
+    Info (332115): Latch Clock  : clk
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      2.168      2.168  R        clock network delay
+    Info (332115):      2.168      0.000     uTco  angle_32[0]~_Duplicate_9
+    Info (332115):      2.545      0.377 RR  CELL  Mult4~8|resulta[15]
+    Info (332115):      2.869      0.324 RR    IC  sine_out[8]~reg0feeder|dataf
+    Info (332115):      2.894      0.025 RR  CELL  sine_out[8]~reg0feeder|combout
+    Info (332115):      2.894      0.000 RR    IC  sine_out[8]~reg0|d
+    Info (332115):      2.919      0.025 RR  CELL  sine_out[8]~reg0
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           latch edge time
+    Info (332115):      2.209      2.209  R        clock network delay
+    Info (332115):      2.003     -0.206           clock pessimism removed
+    Info (332115):      2.003      0.000           clock uncertainty
+    Info (332115):      2.003      0.000      uTh  sine_out[8]~reg0
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     2.919
+    Info (332115): Data Required Time :     2.003
+    Info (332115): Slack              :     0.916 
+    Info (332115): ===================================================================
+    Info (332115): 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -16.304
+Info (332146): Worst-case setup slack is -11.452
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -16.304            -210.110 clk 
-Info (332146): Worst-case hold slack is 0.902
+    Info (332119):   -11.452            -144.389 clk 
+Info (332146): Worst-case hold slack is 0.903
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.902               0.000 clk 
+    Info (332119):     0.903               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -1.702
+Info (332146): Worst-case minimum pulse width slack is 2.418
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.702            -222.318 clk 
+    Info (332119):     2.418               0.000 clk 
+Info (332114): Report Metastability: Found 130 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info (332115): Report Timing: Found 1 setup paths (1 violated).  Worst case slack is -11.452
+    Info (332115): -to_clock [get_clocks {clk}]
+    Info (332115): -setup
+    Info (332115): -stdout
+Info (332115): Path #1: Setup slack is -11.452 (VIOLATED)
+    Info (332115): ===================================================================
+    Info (332115): From Node    : angle_32[0]
+    Info (332115): To Node      : sine_out[12]~reg0
+    Info (332115): Launch Clock : clk
+    Info (332115): Latch Clock  : clk
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      2.410      2.410  R        clock network delay
+    Info (332115):      2.410      0.000     uTco  angle_32[0]
+    Info (332115):      3.700      1.290 RF  CELL  Mult0~8|resulta[18]
+    Info (332115):      4.258      0.558 FF    IC  Mult0~337|datab
+    Info (332115):      4.615      0.357 FF  CELL  Mult0~337|cout
+    Info (332115):      4.615      0.000 FF    IC  Mult0~341|cin
+    Info (332115):      4.615      0.000 FF  CELL  Mult0~341|cout
+    Info (332115):      4.615      0.000 FF    IC  Mult0~345|cin
+    Info (332115):      4.639      0.024 FF  CELL  Mult0~345|cout
+    Info (332115):      4.639      0.000 FF    IC  Mult0~349|cin
+    Info (332115):      4.639      0.000 FF  CELL  Mult0~349|cout
+    Info (332115):      4.639      0.000 FF    IC  Mult0~353|cin
+    Info (332115):      4.663      0.024 FF  CELL  Mult0~353|cout
+    Info (332115):      4.663      0.000 FF    IC  Mult0~357|cin
+    Info (332115):      4.663      0.000 FF  CELL  Mult0~357|cout
+    Info (332115):      4.663      0.000 FF    IC  Mult0~361|cin
+    Info (332115):      4.687      0.024 FF  CELL  Mult0~361|cout
+    Info (332115):      4.687      0.000 FF    IC  Mult0~365|cin
+    Info (332115):      4.687      0.000 FF  CELL  Mult0~365|cout
+    Info (332115):      4.687      0.000 FF    IC  Mult0~369|cin
+    Info (332115):      4.709      0.022 FF  CELL  Mult0~369|cout
+    Info (332115):      4.709      0.000 FF    IC  Mult0~373|cin
+    Info (332115):      4.709      0.000 FF  CELL  Mult0~373|cout
+    Info (332115):      4.709      0.000 FF    IC  Mult0~377|cin
+    Info (332115):      4.764      0.055 FF  CELL  Mult0~377|cout
+    Info (332115):      4.764      0.000 FF    IC  Mult0~381|cin
+    Info (332115):      4.764      0.000 FF  CELL  Mult0~381|cout
+    Info (332115):      4.764      0.000 FF    IC  Mult0~385|cin
+    Info (332115):      4.899      0.135 FF  CELL  Mult0~385|sumout
+    Info (332115):      5.567      0.668 FF    IC  Mult1~8|ay[17]
+    Info (332115):      7.078      1.511 FF  CELL  Mult1~8|resulta[5]
+    Info (332115):      7.612      0.534 FF    IC  Add0~85|datad
+    Info (332115):      7.901      0.289 FR  CELL  Add0~85|cout
+    Info (332115):      7.901      0.000 RR    IC  Add0~89|cin
+    Info (332115):      7.901      0.000 RR  CELL  Add0~89|cout
+    Info (332115):      7.901      0.000 RR    IC  Add0~93|cin
+    Info (332115):      7.928      0.027 RR  CELL  Add0~93|cout
+    Info (332115):      7.928      0.000 RR    IC  Add0~97|cin
+    Info (332115):      7.928      0.000 RR  CELL  Add0~97|cout
+    Info (332115):      7.928      0.000 RR    IC  Add0~101|cin
+    Info (332115):      7.955      0.027 RR  CELL  Add0~101|cout
+    Info (332115):      7.955      0.000 RR    IC  Add0~105|cin
+    Info (332115):      7.955      0.000 RR  CELL  Add0~105|cout
+    Info (332115):      7.955      0.000 RR    IC  Add0~109|cin
+    Info (332115):      7.989      0.034 RR  CELL  Add0~109|cout
+    Info (332115):      7.989      0.000 RR    IC  Add0~113|cin
+    Info (332115):      7.989      0.000 RR  CELL  Add0~113|cout
+    Info (332115):      7.989      0.000 RR    IC  Add0~117|cin
+    Info (332115):      8.040      0.051 RR  CELL  Add0~117|cout
+    Info (332115):      8.040      0.000 RR    IC  Add0~121|cin
+    Info (332115):      8.040      0.000 RR  CELL  Add0~121|cout
+    Info (332115):      8.040      0.000 RR    IC  Add0~73|cin
+    Info (332115):      8.067      0.027 RR  CELL  Add0~73|cout
+    Info (332115):      8.067      0.000 RR    IC  Add0~1|cin
+    Info (332115):      8.067      0.000 RR  CELL  Add0~1|cout
+    Info (332115):      8.067      0.000 RR    IC  Add0~5|cin
+    Info (332115):      8.094      0.027 RR  CELL  Add0~5|cout
+    Info (332115):      8.094      0.000 RR    IC  Add0~9|cin
+    Info (332115):      8.094      0.000 RR  CELL  Add0~9|cout
+    Info (332115):      8.094      0.000 RR    IC  Add0~13|cin
+    Info (332115):      8.121      0.027 RR  CELL  Add0~13|cout
+    Info (332115):      8.121      0.000 RR    IC  Add0~17|cin
+    Info (332115):      8.121      0.000 RR  CELL  Add0~17|cout
+    Info (332115):      8.121      0.000 RR    IC  Add0~21|cin
+    Info (332115):      8.145      0.024 RR  CELL  Add0~21|cout
+    Info (332115):      8.145      0.000 RR    IC  Add0~25|cin
+    Info (332115):      8.145      0.000 RR  CELL  Add0~25|cout
+    Info (332115):      8.145      0.000 RR    IC  Add0~29|cin
+    Info (332115):      8.350      0.205 RF  CELL  Add0~29|sumout
+    Info (332115):      9.107      0.757 FF    IC  Mult2~mult_llmac|ay[7]
+    Info (332115):     10.618      1.511 FF  CELL  Mult2~mult_llmac|resulta[23]
+    Info (332115):     11.497      0.879 FF    IC  Mult2~344|datac
+    Info (332115):     11.820      0.323 FF  CELL  Mult2~344|cout
+    Info (332115):     11.820      0.000 FF    IC  Mult2~348|cin
+    Info (332115):     11.844      0.024 FF  CELL  Mult2~348|cout
+    Info (332115):     11.844      0.000 FF    IC  Mult2~352|cin
+    Info (332115):     11.844      0.000 FF  CELL  Mult2~352|cout
+    Info (332115):     11.844      0.000 FF    IC  Mult2~356|cin
+    Info (332115):     11.874      0.030 FF  CELL  Mult2~356|cout
+    Info (332115):     11.874      0.000 FF    IC  Mult2~360|cin
+    Info (332115):     11.874      0.000 FF  CELL  Mult2~360|cout
+    Info (332115):     11.874      0.000 FF    IC  Mult2~364|cin
+    Info (332115):     11.923      0.049 FF  CELL  Mult2~364|cout
+    Info (332115):     11.923      0.000 FF    IC  Mult2~368|cin
+    Info (332115):     11.923      0.000 FF  CELL  Mult2~368|cout
+    Info (332115):     11.923      0.000 FF    IC  Mult2~372|cin
+    Info (332115):     11.947      0.024 FF  CELL  Mult2~372|cout
+    Info (332115):     11.947      0.000 FF    IC  Mult2~717|cin
+    Info (332115):     12.090      0.143 FF  CELL  Mult2~717|sumout
+    Info (332115):     12.586      0.496 FF    IC  Mult3~383|ax[0]
+    Info (332115):     14.027      1.441 FF  CELL  Mult3~383|resulta[4]
+    Info (332115):     14.735      0.708 FF    IC  Mult3~340|datac
+    Info (332115):     15.038      0.303 FF  CELL  Mult3~340|cout
+    Info (332115):     15.038      0.000 FF    IC  Mult3~344|cin
+    Info (332115):     15.038      0.000 FF  CELL  Mult3~344|cout
+    Info (332115):     15.038      0.000 FF    IC  Mult3~348|cin
+    Info (332115):     15.062      0.024 FF  CELL  Mult3~348|cout
+    Info (332115):     15.062      0.000 FF    IC  Mult3~352|cin
+    Info (332115):     15.062      0.000 FF  CELL  Mult3~352|cout
+    Info (332115):     15.062      0.000 FF    IC  Mult3~356|cin
+    Info (332115):     15.201      0.139 FF  CELL  Mult3~356|sumout
+    Info (332115):     15.652      0.451 FF    IC  Add1~57|datac
+    Info (332115):     15.989      0.337 FR  CELL  Add1~57|cout
+    Info (332115):     15.989      0.000 RR    IC  Add1~61|cin
+    Info (332115):     16.016      0.027 RR  CELL  Add1~61|cout
+    Info (332115):     16.016      0.000 RR    IC  Add1~65|cin
+    Info (332115):     16.016      0.000 RR  CELL  Add1~65|cout
+    Info (332115):     16.016      0.000 RR    IC  Add1~69|cin
+    Info (332115):     16.151      0.135 RF  CELL  Add1~69|sumout
+    Info (332115):     16.616      0.465 FF    IC  Mult4~8|ay[17]
+    Info (332115):     18.127      1.511 FF  CELL  Mult4~8|resulta[18]
+    Info (332115):     18.564      0.437 FF    IC  Mult4~331|dataa
+    Info (332115):     18.949      0.385 FR  CELL  Mult4~331|cout
+    Info (332115):     18.949      0.000 RR    IC  Mult4~335|cin
+    Info (332115):     19.092      0.143 RR  CELL  Mult4~335|sumout
+    Info (332115):     19.092      0.000 RR    IC  sine_out[12]~reg0|d
+    Info (332115):     19.217      0.125 RR  CELL  sine_out[12]~reg0
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      6.000      6.000           latch edge time
+    Info (332115):      7.916      1.916  R        clock network delay
+    Info (332115):      7.935      0.019           clock pessimism removed
+    Info (332115):      7.765     -0.170           clock uncertainty
+    Info (332115):      7.765      0.000     uTsu  sine_out[12]~reg0
+    Info (332115): 
+    Info (332115): Data Arrival Time  :    19.217
+    Info (332115): Data Required Time :     7.765
+    Info (332115): Slack              :   -11.452 (VIOLATED)
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.903
+    Info (332115): -to_clock [get_clocks {clk}]
+    Info (332115): -hold
+    Info (332115): -stdout
+Info (332115): Path #1: Hold slack is 0.903 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : angle_32[0]~_Duplicate_9
+    Info (332115): To Node      : sine_out[8]~reg0
+    Info (332115): Launch Clock : clk
+    Info (332115): Latch Clock  : clk
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      2.146      2.146  R        clock network delay
+    Info (332115):      2.146      0.000     uTco  angle_32[0]~_Duplicate_9
+    Info (332115):      2.502      0.356 RR  CELL  Mult4~8|resulta[15]
+    Info (332115):      2.793      0.291 RR    IC  sine_out[8]~reg0feeder|dataf
+    Info (332115):      2.820      0.027 RR  CELL  sine_out[8]~reg0feeder|combout
+    Info (332115):      2.820      0.000 RR    IC  sine_out[8]~reg0|d
+    Info (332115):      2.843      0.023 RR  CELL  sine_out[8]~reg0
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           latch edge time
+    Info (332115):      2.147      2.147  R        clock network delay
+    Info (332115):      1.940     -0.207           clock pessimism removed
+    Info (332115):      1.940      0.000           clock uncertainty
+    Info (332115):      1.940      0.000      uTh  sine_out[8]~reg0
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     2.843
+    Info (332115): Data Required Time :     1.940
+    Info (332115): Slack              :     0.903 
+    Info (332115): ===================================================================
+    Info (332115): 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5304 megabytes
-    Info: Processing ended: Tue Apr  2 14:32:17 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:01
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 5307 megabytes
+    Info: Processing ended: Fri Apr  5 13:38:18 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:02
 
 
