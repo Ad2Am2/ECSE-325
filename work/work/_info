@@ -15,6 +15,8 @@ R0
 R0
 R0
 R0
+R0
+R0
 Z1 !s12c _opt2
 R0
 R1
@@ -103,7 +105,7 @@ R6
 R7
 R8
 n@_opt1
-OL;O;2021.2;73
+Z11 OL;O;2021.2;73
 R4
 T_opt2
 !s110 1712338293
@@ -118,240 +120,249 @@ R8
 n@_opt2
 R9
 R4
+T_opt3
+!s110 1712692263
+VjJW@2h8ZZbkN95UkM^MbC2
+R10
+=1-208810de7eed-66159c27-a-1070
+R6
+R7
+R8
+n@_opt3
+R11
 Eg06_sine
-Z11 w1712336632
-Z12 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
-Z13 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
-Z14 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+Z12 w1712336632
+Z13 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z14 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z15 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
 !i122 155
-Z15 d//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/work
-Z16 8H:/My Documents/ECSE325/ECSE-325/sine_approximation_pipelined.vhd
-Z17 FH:/My Documents/ECSE325/ECSE-325/sine_approximation_pipelined.vhd
+Z16 d//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/work
+Z17 8H:/My Documents/ECSE325/ECSE-325/sine_approximation_pipelined.vhd
+Z18 FH:/My Documents/ECSE325/ECSE-325/sine_approximation_pipelined.vhd
 l0
 L5 1
 V88?8C`LZQ2K3I5O@2A1Zi1
 !s100 aGf:nc^b4j8D0bz@HA;ZN1
-Z18 OL;C;2023.1;77
+Z19 OL;C;2023.1;77
 32
-Z19 !s110 1712336641
+Z20 !s110 1712336641
 !i10b 1
-Z20 !s108 1712336641.000000
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|H:/My Documents/ECSE325/ECSE-325/sine_approximation_pipelined.vhd|
-Z22 !s107 H:/My Documents/ECSE325/ECSE-325/sine_approximation_pipelined.vhd|
+Z21 !s108 1712336641.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|H:/My Documents/ECSE325/ECSE-325/sine_approximation_pipelined.vhd|
+Z23 !s107 H:/My Documents/ECSE325/ECSE-325/sine_approximation_pipelined.vhd|
 !i113 0
-Z23 o-work work -2002 -explicit
-Z24 tExplicit 1 CvgOpt 0
+Z24 o-work work -2002 -explicit
+Z25 tExplicit 1 CvgOpt 0
 Ano_pipeline
-R12
 R13
 R14
+R15
 DEx4 work 8 g06_sine 0 22 88?8C`LZQ2K3I5O@2A1Zi1
 !i122 155
 l25
 L14 66
 V=D[gY8EWQNOkX?T1Uh2`f0
 !s100 mCC^W<CA]2lEKXT4OVLGo0
-R18
-32
 R19
-!i10b 1
+32
 R20
+!i10b 1
 R21
 R22
-!i113 0
 R23
+!i113 0
 R24
+R25
 Esine_approximation
-Z25 w1712330268
-R12
-R13
-R14
-!i122 354
-Z26 dH:/My Documents/ECSE325/ECSE-325/work
-Z27 8H:/My Documents/ECSE325/ECSE-325/sine_approximation.vhd
-Z28 FH:/My Documents/ECSE325/ECSE-325/sine_approximation.vhd
+Z26 w1712250439
+Z27 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z28 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z29 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 368
+R16
+Z30 8H:/My Documents/ECSE325/ECSE-325/sine_approximation.vhd
+Z31 FH:/My Documents/ECSE325/ECSE-325/sine_approximation.vhd
 l0
 L5 1
-VF:B?=<0KbBaWjUj<iBG[41
-!s100 [BmIA8z=k3Na><d^:Z]AQ3
-R18
+VGD4Jo8:9okUMeOcilJ_z>2
+!s100 7PJS;koKM2S7BJo8=O8Em0
+Z32 OL;C;2021.2;73
 32
-Z29 !s110 1712691765
+Z33 !s110 1712692248
 !i10b 1
-Z30 !s108 1712691765.000000
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|H:/My Documents/ECSE325/ECSE-325/sine_approximation.vhd|
-Z32 !s107 H:/My Documents/ECSE325/ECSE-325/sine_approximation.vhd|
+Z34 !s108 1712692248.000000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|H:/My Documents/ECSE325/ECSE-325/sine_approximation.vhd|
+Z36 !s107 H:/My Documents/ECSE325/ECSE-325/sine_approximation.vhd|
 !i113 0
-R23
 R24
+R25
 Abehavioral
-R12
-R13
-R14
-DEx4 work 18 sine_approximation 0 22 F:B?=<0KbBaWjUj<iBG[41
-!i122 354
+R27
+R28
+R29
+DEx4 work 18 sine_approximation 0 22 GD4Jo8:9okUMeOcilJ_z>2
+!i122 368
 l29
 L11 49
-VULYflO?FkjZk:XbfGiUag3
-!s100 dM]ncfYbBJZdYf^@F>MAb3
-R18
-32
-R29
-!i10b 1
-R30
-R31
+VX977n49mCCz_18E2n^TOY3
+!s100 6z:NJziV0eJha@zn`kXCj3
 R32
+32
+R33
+!i10b 1
+R34
+R35
+R36
 !i113 0
-R23
 R24
+R25
 Esine_approximation_pipelined
-Z33 w1712691712
-R12
-R13
-R14
-!i122 355
-R26
+Z37 w1712692246
+R27
+R28
+R29
+!i122 369
 R16
 R17
+R18
 l0
 L5 1
-Vdh3FK_Llo3@hTQ3^KRAf91
-!s100 X[d5>84GY6e[9aXWaC9Va2
-R18
+VjFR;eYRDc2nV>8Rd1h`@61
+!s100 K`:kLlA_8oHUcDonoWhRC0
+R32
 32
-R29
+Z38 !s110 1712692249
 !i10b 1
-R30
-R21
+R34
 R22
-!i113 0
 R23
+!i113 0
 R24
+R25
 Ano_pipeline
-R12
-R13
-R14
-Z34 DEx4 work 28 sine_approximation_pipelined 0 22 dh3FK_Llo3@hTQ3^KRAf91
-!i122 355
-l25
-Z35 L14 63
-Z36 V6EeQDm;bo`JT2?3ZYbd8f3
-Z37 !s100 K[_lFImBI2JLFePEVl@5i3
-R18
-32
+R27
+R28
 R29
+DEx4 work 28 sine_approximation_pipelined 0 22 jFR;eYRDc2nV>8Rd1h`@61
+!i122 369
+l28
+L13 68
+V5[9`0DO9j>i[HiHS6Xeh:1
+!s100 `j]6kUmXkcQHhYgef?=R?1
+R32
+32
+R38
 !i10b 1
-R30
-R21
+R34
 R22
-!i113 0
 R23
+!i113 0
 R24
+R25
 Abehavioral
-R12
 R13
 R14
+R15
 DEx4 work 28 sine_approximation_pipelined 0 22 0W9T?Nj`i_oW@SN8JFJ490
 !i122 151
 l35
 L11 83
 Va5[9gZO<fUooAOMT9T7BV1
 !s100 ;8z@CPil_IinC=aD5B]KI1
-R18
+R19
 32
 !s110 1712336472
 !i10b 1
 !s108 1712336472.000000
-R21
 R22
-!i113 0
 R23
+!i113 0
 R24
+R25
 w1712336461
-R15
 Esine_approximation_pipelined_vhd_tst
-Z38 w1712680487
-Z39 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z40 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z41 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 351
-R15
-Z42 8//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation_pipelined.vht
-Z43 F//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation_pipelined.vht
+Z39 w1712680487
+R27
+R28
+R29
+!i122 371
+R16
+Z40 8//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation_pipelined.vht
+Z41 F//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation_pipelined.vht
 l0
 L5 1
 VhH:eTT8I@UDH_lgj4>OV_3
 !s100 cj5`lZbb9@79@@>AUMmlP1
-Z44 OL;C;2021.2;73
+R32
 32
-Z45 !s110 1712683193
+R38
 !i10b 1
-Z46 !s108 1712683193.000000
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation_pipelined.vht|
-Z48 !s107 //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation_pipelined.vht|
+Z42 !s108 1712692249.000000
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation_pipelined.vht|
+Z44 !s107 //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation_pipelined.vht|
 !i113 0
-R23
 R24
+R25
 Asine_approximation_pipelined_arch
-R39
-R40
-R41
+R27
+R28
+R29
 DEx4 work 36 sine_approximation_pipelined_vhd_tst 0 22 hH:eTT8I@UDH_lgj4>OV_3
-!i122 351
+!i122 371
 l26
 L8 68
 VCg8c2[A]bo3kMz4d?CEh[3
 !s100 ]4IjhiC^YISj[QgZQ1mUP1
-R44
+R32
 32
-R45
+R38
 !i10b 1
-R46
-R47
-R48
+R42
+R43
+R44
 !i113 0
-R23
 R24
+R25
 Esine_approximation_vhd_tst
-Z49 w1712331519
-R39
-R40
-R41
-!i122 350
-R15
-Z50 8//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation.vht
-Z51 F//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation.vht
+Z45 w1712331519
+R27
+R28
+R29
+!i122 370
+R16
+Z46 8//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation.vht
+Z47 F//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation.vht
 l0
 L5 1
 VOgkF^7][UFUcHcCGY4CMe2
 !s100 _iT;1kNm7UBe4mSVB_85^0
-R44
+R32
 32
-R45
+R38
 !i10b 1
-R46
-Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation.vht|
-Z53 !s107 //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation.vht|
+R42
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation.vht|
+Z49 !s107 //campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation.vht|
 !i113 0
-R23
 R24
+R25
 Asine_approximation_arch
-R39
-R40
-R41
+R27
+R28
+R29
 DEx4 work 26 sine_approximation_vhd_tst 0 22 OgkF^7][UFUcHcCGY4CMe2
-!i122 350
+!i122 370
 l26
 L8 66
 VQG>blYDE:QEaYIndFO<RT3
 !s100 fY:92a@@kY7j7dUDZ8lo21
-R44
+R32
 32
-R45
+R38
 !i10b 1
-R46
-R52
-R53
+R42
+R48
+R49
 !i113 0
-R23
 R24
+R25

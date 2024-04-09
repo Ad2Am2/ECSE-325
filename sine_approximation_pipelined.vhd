@@ -7,7 +7,6 @@ port(
   clock   : in std_logic;
   i       : in std_logic_vector (15 downto 0);
   result  : out std_logic_vector (15 downto 0)
-  --ecursion: out std_logic_vector(31 downto 0)
 );
 end sine_approximation_pipelined;
 
@@ -15,10 +14,14 @@ architecture no_pipeline of sine_approximation_pipelined is
 
 signal reg_out,reg_in  : std_logic_vector(15 downto 0);
 signal reg_1,reg_2,reg_3,reg_4,reg_5,reg_6,reg_7   : std_logic_vector(31 downto 0);
+
 signal pipe_1, pipe_2, pipe_3, pipe_4, pipe_5, pipe_6, pipe_7 : std_logic_vector(31 downto 0);
+
 signal angle_reg_1, angle_reg_2, angle_reg_3, angle_reg_4, angle_reg_5  : std_logic_vector(31 downto 0);
 signal angle_change : std_logic_vector(31 downto 0);
+
 signal A1, B1, C1 : std_logic_vector(31 downto 0);
+
 signal temp1, temp2, temp3, temp4,temp6 : std_logic_vector(63 downto 0);
 signal temp2_1, temp2_2 : std_logic_vector(31 downto 0);
 
@@ -27,6 +30,13 @@ begin
 update : process(clock)
 begin
   if (clock'event and rising_edge(clock)) then
+    angle_reg_5 <= angle_reg_4;
+    angle_reg_4 <= angle_reg_3;
+    angle_reg_3 <= angle_reg_2;
+    angle_reg_2 <= angle_reg_1;
+    angle_reg_1 <= angle_change;
+
+
     reg_1 <= pipe_1;
     reg_2 <= pipe_2;
     reg_3 <= pipe_3;
@@ -34,12 +44,6 @@ begin
     reg_5 <= pipe_5;
     reg_6 <= pipe_6;
     reg_7 <= pipe_7;
-    angle_reg_5 <= angle_reg_4;
-    angle_reg_4 <= angle_reg_3;
-    angle_reg_3 <= angle_reg_2;
-    angle_reg_2 <= angle_reg_1;
-    angle_reg_1 <= angle_change;
-
   end if;
 end process;
 
