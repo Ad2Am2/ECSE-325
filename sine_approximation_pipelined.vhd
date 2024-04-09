@@ -72,7 +72,8 @@ next_6 <= tmp1_6(31 downto 0);
 
 tmp2_1 <= std_logic_vector(to_unsigned(1,32));
 tmp2_2 <= std_logic_vector(unsigned(z_reg_6)+unsigned(tmp2_1(13 downto 0)&"000000000000000000"));
-next_7 <= "0000000000000000000"&tmp2_2(31 downto 19);
+next_7 <= std_logic_vector(resize(unsigned(('0' & tmp2_2(31)) & tmp2_2(31 downto 18)), 32));
+
 
 result <= z_reg_7(15 downto 0);
 --reg_out <= recursion(15 downto 0);

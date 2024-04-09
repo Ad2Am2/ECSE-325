@@ -1,5 +1,5 @@
 {H:/My Documents/ECSE325/ECSE-325/sine_approximation.vhd} {1 {vcom -work work -2002 -explicit -vopt -stats=none {H:/My Documents/ECSE325/ECSE-325/sine_approximation.vhd}
-Questa Intel Starter FPGA Edition-64 vcom 2023.1 Compiler 2023.01 Jan 23 2023
+Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -7,22 +7,22 @@ Questa Intel Starter FPGA Edition-64 vcom 2023.1 Compiler 2023.01 Jan 23 2023
 -- Compiling entity sine_approximation
 -- Compiling architecture Behavioral of sine_approximation
 
-} {} {}} {H:/My Documents/ECSE325/ECSE-325/sine_approximation_pipelined.vhd} {1 {vcom -work work -2002 -explicit -vopt -stats=none {H:/My Documents/ECSE325/ECSE-325/sine_approximation_pipelined.vhd}
-Questa Intel Starter FPGA Edition-64 vcom 2023.1 Compiler 2023.01 Jan 23 2023
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity sine_approximation_pipelined
--- Compiling architecture no_pipeline of sine_approximation_pipelined
-
 } {} {}} {//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation.vht} {1 {vcom -work work -2002 -explicit -vopt -stats=none {//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation.vht}
-Questa Intel Starter FPGA Edition-64 vcom 2023.1 Compiler 2023.01 Jan 23 2023
+Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Compiling entity sine_approximation_vhd_tst
 -- Compiling architecture sine_approximation_arch of sine_approximation_vhd_tst
+
+} {} {}} {//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation_pipelined.vht} {1 {vcom -work work -2002 -explicit -vopt -stats=none {//campus.mcgill.ca/emf/cpe/acorbi2/My Documents/ECSE325/ECSE-325/simulation/questa/sine_approximation_pipelined.vht}
+Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity sine_approximation_pipelined_vhd_tst
+-- Compiling architecture sine_approximation_pipelined_arch of sine_approximation_pipelined_vhd_tst
 
 } {} {}}

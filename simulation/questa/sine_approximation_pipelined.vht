@@ -48,17 +48,19 @@ BEGIN
     BEGIN
         -- Test with different input values
 
+	i <= "0001010101010101";  -- Another input value for angle (pi/3 = 5461)
+        wait for 100 ns;  -- Wait for stable output
+
         i <= "0001000000000000";  -- Input value for angle (pi/4 = 4096)
         wait for 100 ns;  -- Wait for stable output
 
-        i <= "0001010101010101";  -- Another input value for angle (pi/3 = 5461)
+        i <= "0001010100101010";  -- Another input value for angle (pi/3 = 5461)
         wait for 100 ns;  -- Wait for stable output
 
         i <= "0000101010101011";  -- Another input value for angle (pi/6 = 2731)
         wait for 100 ns;  -- Wait for stable output
 
-	i <= "0001010100101010";  -- Another input value for angle (pi/3 = 5461)
-        wait for 100 ns;  -- Wait for stable output
+	
 
 	--angle <= "0101010101010";  -- Another input value for angle (29.02962254 degrees = 2642)
         --wait for 100 ns;  -- Wait for stable output

@@ -18,7 +18,7 @@ ARCHITECTURE sine_approximation_pipelined_arch OF sine_approximation_pipelined_v
     COMPONENT sine_approximation_pipelined
         PORT (
             i: IN std_logic_vector(15 DOWNTO 0);
-            clk : IN STD_LOGIC;
+            clock : IN STD_LOGIC;
             result : OUT std_logic_vector(15 DOWNTO 0)
         );
     END COMPONENT;
@@ -29,7 +29,7 @@ BEGIN
     i1 : sine_approximation_pipelined
     PORT MAP (
         i => i,
-        clk => clock,
+        clock => clock,
         result => result
     );
 
