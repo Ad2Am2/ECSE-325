@@ -64,7 +64,7 @@ PORT (
 ); 
 END COMPONENT;
 
-COMPONENT g31_SHA256_Message_Scheduler
+COMPONENT g31_Message_Scheduler
 PORT(
 	clk : in std_logic;
 	M_i : in std_logic_vector(31 downto 0);
@@ -77,7 +77,7 @@ begin
 
 	ld_i <= '1' when (round_count < 16) else '0';
 
-	i0 : g31_SHA256_Message_Scheduler
+	i0 : g31_Message_Scheduler
 	PORT MAP(
 	clk => clock, M_i => M_inter, ld_i => ld_i, Wt_o => Wt
 	);
