@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Apr 10 13:21:41 2024
+Analysis & Synthesis Status : Successful - Wed Apr 10 14:01:28 2024
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : g31_SHA256
 Top-level Entity Name : g31_SHA256
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 1436
+Total registers : 1062
 Total pins : 77
 Total virtual pins : 0
-Total block memory bits : 512
+Total block memory bits : 896
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
